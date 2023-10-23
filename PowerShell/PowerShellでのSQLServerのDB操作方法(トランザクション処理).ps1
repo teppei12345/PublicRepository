@@ -1,6 +1,6 @@
 # 接続情報の作成
 $connectionString = New-Object -TypeName System.Data.SqlClient.SqlConnectionStringBuilder
-$connectionString['Database'] = 'Implem.Pleasanter'
+$connectionString['Database'] = 'XXXX'
 $connectionString['Integrated Security'] = 'TRUE'
 $connectionString['User ID'] = 'XXXX'
 $connectionString['Password'] = 'XXXX'

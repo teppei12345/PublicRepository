@@ -15,7 +15,7 @@ $retentionPeriod = XX
 
 # 接続情報の作成
 $connectionInfo = New-Object -TypeName System.Data.SqlClient.SqlConnectionStringBuilder
-$connectionInfo['Database'] = 'Implem.Pleasanter'
+$connectionInfo['Database'] = 'XXXX'
 $connectionInfo['Integrated Security'] = 'TRUE'
 $connectionInfo['User ID'] = 'XXXX'
 $connectionInfo['Password'] = 'XXXX'

@@ -9,9 +9,9 @@ Qiitaの記事操作に関する変数定義
 # Qiita APIのエンドポイントURLの指定
 $qiitaApiUrl = 'https://qiita.com/api/v2/items'
 # アクセストークン
-$accessToken = '5a87796425921900b9cac3de96381f0ea1ac0542'
+$accessToken = 'XXXX'
 # 取得したいユーザー名を指定
-$userName = 'teppei12345'
+$userName = 'XXXX'
 # 取得したい件数を指定
 $maxPage = 100
 
@@ -19,17 +19,17 @@ $maxPage = 100
 API処理に関する変数定義
 #>
 # APIキー
-$apiKey = 'e8874f905f3a8278078084ecd279dc3a54ed347c732845c6e99cc98cacefc8428e86e0f56d32ed31f43225e75001fcd524f9df02b2f122397c54da7a30028c1c'
+$apiKey = 'XXXX'
 # 一括処理URLとレコード作成URLのドメインまでの指定(スキーマ+ドメイン「http://localhost」のように指定)
 $baseUri = 'https://pleasanter.net'
 # Qiita記事を登録するサイトのサイトIDを指定
-$qiitaSiteId = '9967923'
+$qiitaSiteId = 'XXXX'
 # メール送信APIを実行する際のダミーレコードIDを指定
-$sendMailRecordId = '10041667'
+$sendMailRecordId = 'XXXX'
 # APIバージョンを指定
 $apiVersion = 1.1
 # 宛先メールアドレスを指定
-$toMailAddress = 'urata@implem.co.jp'
+$toMailAddress = 'XXXX@example.co.jp'
 # 通知メールの件名を指定
 $mailTitle = 'Qiitaの記事を登録しました。'
 # 通知メールの本文を指定
@@ -46,7 +46,7 @@ $contentType = 'application/json'
 # 例) 18日 17:00に実行し、かつ「4」を指定した場合、14日の16:59以前のファイルが削除されます。
 $deletLogFilePeriod = 31
 # ログファイルの格納ディレクトリのPathを定義
-$createLogDirectoryPath = 'C:\Implem\個人フォルダ_その他諸々\batch\Qiita\getQiitaBlog\logFile'
+$createLogDirectoryPath = 'XXXX\logFile'
 # 現在日時を取得
 $nowDate = Get-Date -Format 'yyyyMMddHHmmss'
 # ログファイルの格納場所を定義

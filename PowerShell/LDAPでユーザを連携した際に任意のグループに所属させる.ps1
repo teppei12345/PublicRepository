@@ -16,20 +16,20 @@ $processingSpeed = (Measure-Command {
 # 例) 18日 17:00に実行し、かつ「4」を指定した場合、14日の16:59以前のファイルが削除されます
 $deletLogPeriod = 4
 # ログファイルの格納ディレクトリのPathを定義
-$toPath = 'C:\work'
+$toPath = 'XXXX'
 
 <#
 データベースに関する変数定義
 #>
 
 # データベース名を定義
-$databaseName = 'Implem.Pleasanter'
+$databaseName = 'XXXX'
 # Windows統合認証を定義(TRUE:有効化, FALSE:無効化)
-$integratedSecurity = 'TRUE'
+$integratedSecurity = 'XXXX'
 # ユーザIDを定義
-$userId = 'sa'
+$userId = 'XXXX'
 # パスワードを定義
-$password = 'SetSaPWD'
+$password = 'XXXX'
 
 <#
 SQL文に関する変数定義
