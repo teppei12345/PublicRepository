@@ -182,7 +182,7 @@ if ($response) {
             'Title'      = $title
             'Body'       = $body
             'ClassHash'  = @{
-                'ClassB' = $classB
+            'ClassB'     = $classB
             }
         }
         # JSON形式に変換
