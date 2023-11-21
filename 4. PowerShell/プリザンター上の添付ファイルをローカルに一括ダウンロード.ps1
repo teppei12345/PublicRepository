@@ -6,9 +6,9 @@
 #>
 
 # ダウンロード先Path(「C:\work」のように指定)
-$toPath = "XXXX"
+$toPath = 'XXXX'
 # Pleasanter上の(プロトコル+ドメイン「https://pleasanter.net/fs」のように指定)
-$baseUri = "XXXX"
+$baseUri = 'XXXX'
 # APIキー
 $apiKey = 'XXXX'
 # テーブルのサイトID
@@ -21,6 +21,8 @@ $apiVersion = 0
 $method = 'XXXX'
 # ContentTypeを設定
 $contentType = 'XXXX'
+# 取得したい添付ファイル項目を選択する
+$attachment = 'XXXX'
 
 
 <#
@@ -34,9 +36,9 @@ try {
 do {
     # JSONの中身
     $jsonData = @{
-        "ApiVersion" = $apiVersion
-        "ApiKey" = $apiKey
-        "Offset" = $offSet
+        'ApiVersion' = $apiVersion
+        'ApiKey' = $apiKey
+        'Offset' = $offSet
     }
     # テキスト形式に変換
     $json = $jsonData|ConvertTo-Json
@@ -57,21 +59,21 @@ do {
         # レコードのResultIdを代入
         $id = $record.ResultId
         # ダウンロード先フォルダパスを代入
-        $folderPath = $toPath + "\" + $id
+        $folderPath = $toPath + '\' + $id
         # フォルダが存在しない場合処理を続行
         if (-not(Test-Path $folderPath)) {
             # ダウンロード先フォルダを作成
             New-Item -Path $folderPath -Type Directory
         # フォルダが存在する場合
         } else {
-            write-host "フォルダが存在します"
+            write-host 'フォルダが存在します'
         }
         # 応答のAttachmentsHashの中身を代入
         $recordLinks = $record.AttachmentsHash
         # データ単位の反復処理
         foreach ($recordLink in $recordLinks){
             # AttachmentsAの中身を代入
-            $attachments = $recordLink.AttachmentsA
+            $attachments = $recordLink.$attachment
             # ファイル単位の反復処理
             foreach ($attachment in $attachments) {
                 # ファイル名を代入
@@ -81,7 +83,7 @@ do {
                 # ダウンロード元にファイルが存在していれば処理を続行
                 if (-not($name -eq $null)) {
                     # GUIDをもとにダウンロード元Pathを代入
-                    $uri = $baseUri + "/api/binaries/" + $guId + "/get"
+                    $uri = $baseUri + '/api/binaries/' + $guId + '/get'
                     # WEBページにアクセスし応答を代入
                     $responseData = Invoke-WebRequest -Uri $uri -ContentType $contentType -Method $method -Body $json
                     # 各ファイルのBase64を代入
@@ -89,16 +91,16 @@ do {
                     # $base64をデコード
                     $byte = [System.Convert]::FromBase64String($base64)
                     # 出力先のファイル名を代入
-                    $toFileName = $toPath + "\" + $id + "\" + $name
+                    $toFileName = $toPath + '\' + $id + '\' + $name
                     # ファイルが存在しない場合処理を続行
                     if (-not(Test-Path $toFileName)) {
                         # ファイルをダウンロード先に作成
                         New-Item -Path $folderPath -Name $name -Type File
                         # ダウンロード先のファイルに$srcを書き込む
-                        [System.IO.File]::WriteAllBytes($folderPath + "\" + $name,$byte)
+                        [System.IO.File]::WriteAllBytes($folderPath + '\' + $name,$byte)
                     # ファイルが存在する場合
                     } else {
-                        Write-Host "ファイルが存在します"
+                        Write-Host 'ファイルが存在します'
                     }
                 }
             }
@@ -106,7 +108,7 @@ do {
     }
     $offSet = $offSet + $pageSize
 } while ($totalCount -ge $offSet)
-write-host "ダウンロードが完了いたしました"
+write-host 'ダウンロードが完了いたしました'
 } catch {
     $_.Exception.Response
 }
