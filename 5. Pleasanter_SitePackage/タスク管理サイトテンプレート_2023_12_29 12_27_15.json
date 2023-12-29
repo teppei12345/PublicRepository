@@ -1,0 +1,2828 @@
+﻿{
+  "HeaderInfo": {
+    "AssemblyVersion": "1.3.48.0",
+    "BaseSiteId": 11057715,
+    "Server": "https://pleasanter.net/fs",
+    "CreatorName": "浦田 哲平",
+    "PackageTime": "2023-12-29T03:27:08.7004406+00:00",
+    "Convertors": [
+      {
+        "SiteId": 11057715,
+        "SiteTitle": "タスク管理サイトテンプレート",
+        "ReferenceType": "Sites",
+        "IncludeData": false,
+        "Order": "[0,11057716,11057721,11057720]"
+      },
+      {
+        "SiteId": 11057716,
+        "SiteTitle": "SI案件タスク管理テンプレート",
+        "ReferenceType": "Sites",
+        "IncludeData": false,
+        "Order": "[11057717,11057718,0,0]"
+      },
+      {
+        "SiteId": 11057717,
+        "SiteTitle": "メインタスク管理テーブルテンプレート",
+        "ReferenceType": "Issues",
+        "IncludeData": false
+      },
+      {
+        "SiteId": 11057718,
+        "SiteTitle": "サブタスク管理テーブルテンプレート",
+        "ReferenceType": "Issues",
+        "IncludeData": false
+      },
+      {
+        "SiteId": 11057719,
+        "SiteTitle": "KPTテーブルテンプレート",
+        "ReferenceType": "Results",
+        "IncludeData": false
+      },
+      {
+        "SiteId": 11057720,
+        "SiteTitle": "空いている時間に着手タスクテーブルテンプレート",
+        "ReferenceType": "Results",
+        "IncludeData": false
+      },
+      {
+        "SiteId": 11057721,
+        "SiteTitle": "社内案件タスク管理テンプレート",
+        "ReferenceType": "Sites",
+        "IncludeData": false,
+        "Order": "[]"
+      },
+      {
+        "SiteId": 11057722,
+        "SiteTitle": "メインタスク管理テーブルテンプレート",
+        "ReferenceType": "Issues",
+        "IncludeData": false
+      },
+      {
+        "SiteId": 11057723,
+        "SiteTitle": "サブタスク管理テーブルテンプレート",
+        "ReferenceType": "Issues",
+        "IncludeData": false
+      },
+      {
+        "SiteId": 11057724,
+        "SiteTitle": "KPTテーブルテンプレート",
+        "ReferenceType": "Results",
+        "IncludeData": false
+      }
+    ],
+    "IncludeSitePermission": true,
+    "IncludeRecordPermission": true,
+    "IncludeColumnPermission": true,
+    "IncludeNotifications": false,
+    "IncludeReminders": false
+  },
+  "Sites": [
+    {
+      "TenantId": 1,
+      "SiteId": 11057715,
+      "Title": "タスク管理サイトテンプレート",
+      "SiteName": "",
+      "SiteGroupName": "",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Sites",
+      "ParentId": 10868494,
+      "InheritPermission": 11057715,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Sites",
+        "Styles": [
+          {
+            "Title": "背景色",
+            "All": true,
+            "Body": "body {\n    background-color: #808080;\n}\n\n#FieldSetGeneral{\n    background-color: #C0C0C0;\n}\n\n.grid-row{\n    background-color: #C0C0C0;\n}",
+            "Id": 1
+          }
+        ],
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    },
+    {
+      "TenantId": 1,
+      "SiteId": 11057716,
+      "Title": "SI案件タスク管理テンプレート",
+      "SiteName": "",
+      "SiteGroupName": "",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Sites",
+      "ParentId": 11057715,
+      "InheritPermission": 11057716,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Sites",
+        "Styles": [
+          {
+            "Title": "背景色",
+            "All": true,
+            "Body": "body {\n    background-color: #808080;\n}\n\n#FieldSetGeneral{\n    background-color: #C0C0C0;\n}\n\n.grid-row{\n    background-color: #C0C0C0;\n}",
+            "Id": 1
+          }
+        ],
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    },
+    {
+      "TenantId": 1,
+      "SiteId": 11057717,
+      "Title": "メインタスク管理テーブルテンプレート",
+      "SiteName": "",
+      "SiteGroupName": "",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "[md]\n### 運用手順\n1. 後述の「記入欄」を参考に各項目に記入  \n1. 準備プロセスをクリック  \n1. タスク管理テーブル(詳細)ボタンをクリック  \n1. タスク管理テーブル(詳細)テーブル上で個々のタスクを定義\n1. 該当タスクを実施するとき作業開始プロセスをクリック  \n1. 本番適用が完了したら(斉藤様にレビュー依頼を出したら)レビュー実施プロセスをクリック  \n1. 課題管理テーブルが完了に変わったら完了プロセスをクリック  \n\n### 記入欄\nメインタスク：課題管理のタイトル  \n内容：該当課題の内容やタスク内容  \n作業優先度：該当課題の優先度  \n期限：該当課題の期限  \n優先フラグ：同じ条件の課題のうち優先して着手する必要があると判断した場合にチェック  \n関連課題：該当課題と関連している課題  \nリンク：該当の課題レコード  \n開始予定：本課題を開始予定日時  \n完了予定：本課題の本番適用完了(課題完了)予定日時  ",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Issues",
+      "ParentId": 11057716,
+      "InheritPermission": 11057716,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Issues",
+        "GridView": 2,
+        "LinkTableView": 1,
+        "GridColumns": [
+          "IssueId",
+          "Status",
+          "ClassA",
+          "StartTime",
+          "CompletionTime",
+          "DateA",
+          "DateB",
+          "NumA",
+          "NumB",
+          "ClassB",
+          "DateC",
+          "CheckA",
+          "ClassD",
+          "ClassC"
+        ],
+        "EditorColumnHash": {
+          "General": [
+            "IssueId",
+            "_Section-1",
+            "ClassA",
+            "Body",
+            "ClassD",
+            "CompletionTime",
+            "CheckA",
+            "ClassE",
+            "ClassC",
+            "DescriptionA",
+            "AttachmentsA",
+            "_Section-2",
+            "StartTime",
+            "DateC",
+            "_Section-3",
+            "DateA",
+            "DateB",
+            "Status",
+            "_Section-4",
+            "NumA",
+            "NumB",
+            "ClassB",
+            "Comments"
+          ]
+        },
+        "SectionLatestId": 4,
+        "Sections": [
+          {
+            "Id": 1,
+            "LabelText": "作業内容",
+            "AllowExpand": true,
+            "Expand": true
+          },
+          {
+            "Id": 2,
+            "LabelText": "予定",
+            "AllowExpand": true,
+            "Expand": false
+          },
+          {
+            "Id": 3,
+            "LabelText": "実作業",
+            "AllowExpand": true,
+            "Expand": false
+          },
+          {
+            "Id": 4,
+            "LabelText": "サマリ",
+            "AllowExpand": true,
+            "Expand": false
+          }
+        ],
+        "TitleColumns": [
+          "Title",
+          "IssueId"
+        ],
+        "Columns": [
+          {
+            "ColumnName": "StartTime",
+            "LabelText": "開始予定",
+            "GridFormat": "Ymdahm",
+            "EditorFormat": "Ymdhm",
+            "ValidateRequired": true,
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "CompletionTime",
+            "LabelText": "期限",
+            "GridFormat": "Ymd",
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "Owner",
+            "NoWrap": true,
+            "ValidateRequired": true
+          },
+          {
+            "ColumnName": "NumA",
+            "LabelText": "予定工数",
+            "NoWrap": true
+          },
+          {
+            "ColumnName": "NumB",
+            "LabelText": "実工数"
+          },
+          {
+            "ColumnName": "ClassB",
+            "LabelText": "予実差",
+            "DefaultInput": "0"
+          },
+          {
+            "ColumnName": "IssueId",
+            "LabelText": "メインタスクID"
+          },
+          {
+            "ColumnName": "ClassA",
+            "LabelText": "メインタスク",
+            "NoWrap": true,
+            "ValidateRequired": true,
+            "FieldCss": "field-wide"
+          },
+          {
+            "ColumnName": "Title",
+            "LabelText": "メインタスクID",
+            "ValidateRequired": false
+          },
+          {
+            "ColumnName": "ClassC",
+            "LabelText": "リンク"
+          },
+          {
+            "ColumnName": "DateA",
+            "LabelText": "開始",
+            "GridFormat": "Ymdhm",
+            "EditorFormat": "Ymdhm",
+            "EditorReadOnly": true,
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "DateB",
+            "LabelText": "完了",
+            "GridFormat": "Ymdhm",
+            "EditorFormat": "Ymdhm",
+            "EditorReadOnly": true,
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "Status",
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "Manager",
+            "ValidateRequired": true
+          },
+          {
+            "ColumnName": "ClassD",
+            "LabelText": "作業優先度",
+            "ChoicesText": "A\nB\nC",
+            "SearchType": "PartialMatch"
+          },
+          {
+            "ColumnName": "DateC",
+            "LabelText": "完了予定",
+            "DefaultInput": "1",
+            "GridFormat": "Ymdhm",
+            "EditorFormat": "Ymdhm",
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "CheckA",
+            "LabelText": "優先フラグ"
+          },
+          {
+            "ColumnName": "ClassE",
+            "LabelText": "関連課題",
+            "ChoicesText": "[[11057717]]",
+            "UseSearch": true,
+            "Link": true,
+            "SearchType": "PartialMatch"
+          },
+          {
+            "ColumnName": "DescriptionA",
+            "LabelText": "備考"
+          },
+          {
+            "ColumnName": "AttachmentsA",
+            "LabelText": "添付ファイル"
+          }
+        ],
+        "Links": [
+          {
+            "ColumnName": "ClassE",
+            "SiteId": 11057717
+          }
+        ],
+        "Processes": [
+          {
+            "Id": 1,
+            "Name": "作業開始",
+            "DisplayName": "作業開始",
+            "CurrentStatus": 150,
+            "ChangedStatus": 200,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputDateTime",
+                "ColumnName": "DateA",
+                "BaseDateTime": "CurrentTime",
+                "Value": "0,Days"
+              }
+            ]
+          },
+          {
+            "Id": 3,
+            "Name": "レビュー実施",
+            "DisplayName": "レビュー実施",
+            "CurrentStatus": 200,
+            "ChangedStatus": 300,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 4,
+            "Name": "完了",
+            "DisplayName": "完了",
+            "CurrentStatus": 300,
+            "ChangedStatus": 900,
+            "ConfirmationMessage": "課題管理テーブルの作業時間は更新しましたか？",
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputDateTime",
+                "ColumnName": "DateB",
+                "BaseDateTime": "CurrentTime",
+                "Value": "0,Days"
+              }
+            ]
+          },
+          {
+            "Id": 5,
+            "Name": "完了",
+            "DisplayName": "完了",
+            "CurrentStatus": 200,
+            "ChangedStatus": 900,
+            "ConfirmationMessage": "課題管理テーブルの作業時間は更新しましたか？",
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputDateTime",
+                "ColumnName": "DateB",
+                "BaseDateTime": "CurrentTime",
+                "Value": "0,Days"
+              }
+            ]
+          },
+          {
+            "Id": 6,
+            "Name": "保留",
+            "DisplayName": "保留",
+            "CurrentStatus": -1,
+            "ChangedStatus": 910,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 7,
+            "Name": "準備",
+            "DisplayName": "準備",
+            "ScreenType": 10,
+            "CurrentStatus": 100,
+            "ChangedStatus": 150,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 8,
+            "Name": "再始動",
+            "DisplayName": "再始動",
+            "CurrentStatus": 910,
+            "ChangedStatus": 150,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 9,
+            "Name": "工数集計",
+            "DisplayName": "工数集計",
+            "CurrentStatus": -1,
+            "ChangedStatus": -1,
+            "AllowBulkProcessing": true,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          }
+        ],
+        "ViewLatestId": 2,
+        "Views": [
+          {
+            "Id": 1,
+            "Name": "リンク",
+            "GridColumns": [
+              "IssueId",
+              "Status",
+              "ClassA",
+              "StartTime",
+              "CompletionTime",
+              "DateA",
+              "DateB",
+              "DateC",
+              "CheckA",
+              "ClassD",
+              "ClassC"
+            ],
+            "ApiColumnKeyDisplayType": 0,
+            "ApiColumnValueDisplayType": 0,
+            "CalendarTimePeriod": "Monthly",
+            "CalendarFromTo": "StartTime-CompletionTime",
+            "CrosstabGroupByX": "Status",
+            "CrosstabGroupByY": "Status",
+            "CrosstabAggregateType": "Total",
+            "CrosstabValue": "NumA",
+            "CrosstabTimePeriod": "Monthly",
+            "ApiDataType": 0
+          },
+          {
+            "Id": 2,
+            "Name": "一覧",
+            "DefaultMode": "Index",
+            "GridColumns": [
+              "IssueId",
+              "Status",
+              "ClassA",
+              "StartTime",
+              "DateC",
+              "DateA",
+              "DateB",
+              "CompletionTime",
+              "CheckA",
+              "ClassD",
+              "ClassC",
+              "NumA",
+              "NumB",
+              "ClassB"
+            ],
+            "ColumnFilterHash": {
+              "Status": "[\"100\",\"150\",\"200\",\"300\",\"910\"]"
+            },
+            "ColumnSorterHash": {
+              "CompletionTime": "asc",
+              "CheckA": "desc",
+              "ClassD": "asc",
+              "Status": "asc"
+            },
+            "ApiColumnKeyDisplayType": 0,
+            "ApiColumnValueDisplayType": 0,
+            "CalendarTimePeriod": "Monthly",
+            "CalendarFromTo": "StartTime-CompletionTime",
+            "CrosstabGroupByX": "Status",
+            "CrosstabGroupByY": "Status",
+            "CrosstabAggregateType": "Total",
+            "CrosstabValue": "NumA",
+            "CrosstabTimePeriod": "Monthly",
+            "ApiDataType": 0
+          }
+        ],
+        "Styles": [
+          {
+            "Title": "背景色",
+            "New": true,
+            "Edit": true,
+            "Index": true,
+            "Body": "body {\n    background-color: #808080;\n}\n\n#FieldSetGeneral{\n    background-color: #C0C0C0;\n}\n\n.grid-row{\n    background-color: #C0C0C0;\n}",
+            "Id": 1
+          },
+          {
+            "Title": "「新バージョンとして保存」を非表示にする",
+            "New": true,
+            "Edit": true,
+            "Body": "#VerUp, label[for='VerUp'] {\n    display: none;\n}",
+            "Id": 2
+          }
+        ],
+        "Scripts": [
+          {
+            "Title": "編集画面設定用($p.events.on_editor_load)",
+            "New": true,
+            "Edit": true,
+            "Body": "$p.events.on_editor_load = function () {\n    // 常に新バージョンとして保存をオン\n    let verup = $(\"#VerUp\");\n    verup.prop('checked', true);\n\n    // リンクボタンの表示\n    $('#Issues_ClassCField').after('<button type=\"button\" style=\"display:block;float:left;height:30px;padding:7px 12px;border:solid 1px silver;background-color:white;\" onclick=\"Transition()\">リンク</button>');\n};\nfunction Transition() {\n    open($p.getControl('ClassC').val());\n}",
+            "Id": 1
+          },
+          {
+            "Title": "一覧画面($p.events.on_grid_load)",
+            "Index": true,
+            "Body": "$p.events.on_grid_load = function () {\n    // リンク列にリンクを設定\n    let table = document.getElementById('Grid');\n    let colNum = $p.getGridColumnIndex('ClassC');\n    for (let row of table.rows) {\n        console.log(row.className);\n        if (row.className === 'grid-row') {\n            let urlText = row.cells[colNum].textContent;\n            const a1 = document.createElement(\"a\");\n            a1.href = urlText;\n            a1.target = \"_blank\";\n            a1.innerText = urlText;\n            row.cells[colNum].textContent = \"\";\n            row.cells[colNum].appendChild(a1);\n        }\n    }\n}",
+            "Id": 2
+          }
+        ],
+        "ServerScripts": [
+          {
+            "Title": "子テーブルから情報を取得する",
+            "Name": "予定工数と実工数を計上し、予実差を計算した値をそれぞれ項目に設定する・開始予定と終了予定から最も古い開始日と最も新しい終了日から値を設定する",
+            "BeforeCreate": true,
+            "BeforeUpdate": true,
+            "Body": "try {\n    if (context.Action === 'edit' || context.Action === 'update') {\n        context.Log('子テーブルから値を取得・設定する処理開始');\n        // タスク管理テーブル(詳細)テーブルのサイトIDを設定\n        const siteId = 10887733;\n        // メインタスクIDを設定\n        const mainTaskId = model.IssueId;\n        // 予定工数を計上する変数を初期化\n        let expectationCosts = 0;\n        // 実工数を計上する変数を初期化\n        let actualCosts = 0;\n        // 予実差を計上する変数を初期化\n        let differenceCosts = 0;\n        // 開始予定を設定する変数を初期化\n        let expectationStartTimes = new Array();\n        // 完了予定を設定する変数を初期化\n        let expectationEndTimes = new Array();\n        // 最も新しい開始予定を設定する変数を初期化\n        let firstStartTime = new Date();\n        // 最も古い終了予定を設定する変数を初期化\n        let lastEndTime = firstStartTime.getMinutes() + 1;\n        // サイト情報を取得\n        let data = {\n            'View': {\n                'ColumnFilterHash': {\n                    'ClassA': '[' + mainTaskId + ']',\n                    'CheckA': false\n                }\n            }\n        };\n        // リンクされている子レコードの情報を取得\n        let sites = items.Get(siteId, JSON.stringify(data));\n        if (sites) {\n            context.Log('子テーブルにリンクレコードの存在：あり');\n            // レコード数分反復\n            for (let site of sites) {\n                // 予定工数と実工数を計上する\n                calculateCost(site);\n                // 開始予定と終了予定の値を取得する\n                getTime(site);\n            }\n            // 計上した予定工数と実工数から予実差を計算し、値を設定する\n            setCost();\n            // 開始予定から値を設定する\n            setExpectationStartTime();\n            // 終了予定から値を設定する\n            setExpectationEndTime();\n        } else {\n            context.Log('子テーブルにリンクレコードの存在：なし');\n            model.ClassB = 0;\n        }\n\n\n        // ロジック箇所\n        // 予定工数と実工数を計上し、予実差を計算した値をそれぞれ項目に設定する\n        function calculateCost(site) {\n            context.Log('予定工数と実工数の取得処理開始');\n            expectationCosts += site.NumA;\n            actualCosts += site.NumB;\n            context.Log('予定工数と実工数の取得処理終了');\n        }\n        // 開始予定と終了予定の値を取得する\n        function getTime(site) {\n            context.Log('開始予定と終了予定の取得処理開始');\n            expectationStartTimes.push(site.StartTime);\n            expectationEndTimes.push(site.CompletionTime);\n            context.Log('開始予定と終了予定の取得処理終了');\n        }\n        // 計上した予定工数と実工数から予実差を計算し、値を設定する\n        function setCost() {\n            context.Log('予実差の計上処理開始');\n            differenceCosts = expectationCosts - actualCosts;\n            model.NumA = expectationCosts;\n            model.NumB = actualCosts;\n            model.ClassB = differenceCosts;\n            context.Log('予実差の計上処理終了');\n        }\n        // 開始予定から値を設定する\n        function setExpectationStartTime() {\n            let tmp;\n            let count = 1;\n            context.Log('開始予定の設定処理開始');\n            if (expectationStartTimes) {\n                context.Log('開始予定の存在：あり');\n                for (let expectationStartTime of expectationStartTimes) {\n                    if (count === 1) {\n                        firstStartTime = new Date(expectationStartTime);\n                    } else {\n                        tmp = new Date(expectationStartTime);\n                        if (tmp < firstStartTime) {\n                            firstStartTime = tmp;\n                        }\n                    }\n                    count++;\n                }\n                model.StartTime = firstStartTime;\n            } else {\n                context.Log('開始予定の存在：なし');\n                model.StartTime = firstStartTime;\n            }\n            context.Log('開始予定の設定処理終了');\n        }\n        // 終了予定から値を設定する\n        function setExpectationEndTime() {\n            let tmp;\n            let count = 1;\n            context.Log('終了予定の設定処理開始');\n            if (expectationEndTimes) {\n                context.Log('終了予定の存在：あり');\n                for (let expectationEndTime of expectationEndTimes) {\n                    if (count === 1) {\n                        lastEndTime = new Date(expectationEndTime);\n                    } else {\n                        tmp = new Date(expectationEndTime);\n                        if (tmp > lastEndTime) {\n                            lastEndTime = tmp;\n                        }\n                    }\n                    count++;\n                }\n                model.DateC = lastEndTime;\n            } else {\n                context.Log('終了予定の存在：なし');\n                model.DateC = lastEndTime;\n            }\n            context.Log('終了予定の設定処理終了');\n        }\n        context.Log('子テーブルから値を取得・設定する処理終了');\n    }\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 2
+          },
+          {
+            "Title": "標準ボタンを非表示",
+            "Name": "",
+            "BeforeOpeningPage": true,
+            "Body": "try {\n    elements.DisplayType('CreateCommand', 1);\n    elements.DisplayType('OpenCopyDialogCommand', 1);\n    elements.DisplayType('EditOutgoingMail', 1);\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 3
+          },
+          {
+            "Title": "一覧画面の一括削除・インポート・エクスポートボタンを非表示にする",
+            "Name": "",
+            "BeforeOpeningPage": true,
+            "Body": "// 一覧画面\nif (context.Action === 'index') {\n    elements.DisplayType('BulkDeleteCommand', 3);  // 一括削除\n    elements.DisplayType('EditImportSettings', 3);  // インポート\n    elements.DisplayType('OpenExportSelectorDialogCommand', 3);  // エクスポート\n}",
+            "TimeOut": 0,
+            "Id": 4
+          },
+          {
+            "Title": "工数集計処理①",
+            "Name": "",
+            "AfterUpdate": true,
+            "Body": "try {\n    // 今月の予定工数を計算する変数を初期化\n    let resultExpectationCost;\n    // 今月の実工数を計算する変数を初期化\n    let resultActualCost;\n    // 今月の予実差を計算する変数を初期化\n    let resultDifferenceCost;\n    // 今月工数を設定する変数を初期化\n    let thisMonthCost;\n    // 今月の稼働日数を設定する変数を初期化\n    let thisMonthDays;\n    // 編集画面\n    if (context.ControlId === 'Process_1') {\n        // 予定工数を設定する変数を初期化\n        let expectationCost;\n        // 実工数を設定する変数を初期化\n        let actualCost;\n        // 予実差を設定する変数を初期化\n        let differenceCost;\n        context.Log('工数計算処理開始');\n        expectationCost = model.NumA;\n        actualCost = model.NumB;\n        differenceCost = model.ClassB;\n        inputDialog();\n        calculateCost();\n        context.Log('工数計算処理終了');\n        // 一覧画面にて\n    } else if (context.ControlId === 'BulkProcessCommand') {\n        context.Log('工数計算処理開始');\n        context.Log('レコードID：' + model.IssueId + ', タスク名：' + model.ClassA);\n        context.Log('予定工数：' + model.NumA + '実工数：' + model.NumB + '予実差：' + Number(model.ClassB))\n        if (!context.UserData.expectationCost) context.UserData.expectationCost = 0;\n        if (!context.UserData.actualCost) context.UserData.actualCost = 0;\n        if (!context.UserData.differenceCost) context.UserData.differenceCost = 0;\n        context.UserData.expectationCost += model.NumA;\n        context.Log(context.UserData.expectationCost);\n        context.UserData.actualCost += model.NumB;\n        context.Log(context.UserData.actualCost);\n        context.UserData.differenceCost += Number(model.ClassB);\n        context.Log(context.UserData.differenceCost);\n        context.Log('工数計算処理終了');\n    }\n\n    function inputDialog() {\n        context.Log('今月の工数設定処理開始');\n        thisMonthDays = window.prompt(\"今月の稼働日数を入力してください。\", \"\");\n        context.Log('今月の稼働日数：' + thisMonthDays);\n        thisMonthCost = thisMonthDays * 450;\n        context.Log('今月工数(450分/日)：' + thisMonthCost)\n        context.Log('今月の工数設定処理終了');\n    }\n    function calculateCost() {\n        context.Log('今月の工数計算処理開始');\n        context.Log('予定工数を計算');\n        resultExpectationCost = expectationCost / thisMonthCost;\n        context.Log('実工数を計算');\n        resultActualCost = actualCost / thisMonthCost;\n        context.Log('予実差を計算')\n        resultDifferenceCost = differenceCost / thisMonthCost;\n        context.Log('予定工数：' + resultExpectationCost + '/人月');\n        context.Log('実工数：' + resultActualCost + '/人月');\n        context.Log('予実差：' + resultDifferenceCost + '/人月');\n        context.Log('今月の工数計算処理終了');\n    }\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 5
+          },
+          {
+            "Title": "工数集計処理②",
+            "Name": "",
+            "BeforeOpeningPage": true,
+            "Body": "try {\n    // 今月の予定工数を計算する変数を初期化\n    let resultExpectationCost;\n    // 今月の実工数を計算する変数を初期化\n    let resultActualCost;\n    // 今月の予実差を計算する変数を初期化\n    let resultDifferenceCost;\n    // 今月工数を設定する変数を初期化\n    let thisMonthCost;\n    // 今月の稼働日数を設定する変数を初期化\n    let thisMonthDays = 20;\n// 一覧画面\nif (context.ControlId === 'BulkProcessCommand') {\n    context.Log('一括処理開始');\n    context.Log('予定工数：' + context.UserData.expectationCost);\n    context.Log('実工数：' + context.UserData.actualCost);\n    context.Log('予実差：' + context.UserData.differenceCost);\n    context.Log('今月の稼働日数：' + thisMonthDays);\n    thisMonthCost = thisMonthDays * 450;\n    context.Log('今月工数(450分/日)：' + thisMonthCost)\n    context.Log('予定工数を計算');\n    resultExpectationCost = context.UserData.expectationCost / thisMonthCost * 100;\n    context.Log('実工数を計算');\n    resultActualCost = context.UserData.actualCost / thisMonthCost * 100;\n    context.Log('予実差を計算');\n    resultDifferenceCost = context.UserData.differenceCost / thisMonthCost * 100;\n    context.Log('予定工数：' + (Math.round(resultExpectationCost) / 100) + '(' + Math.round(((context.UserData.expectationCost / 60) * 100)) / 100 + '時間)/人月(' + Math.round(((context.UserData.expectationCost / 450) * 100)) / 100 + '/人日)');\n    context.Log('実工数：' + (Math.round(resultActualCost) / 100) + '(' + Math.round(((context.UserData.actualCost / 60) * 100)) / 100 + '時間)/人月(' + Math.round(((context.UserData.actualCost / 450) * 100)) / 100 + '/人日)');\n    context.Log('予実差：' + (Math.round(resultDifferenceCost) / 100) + '(' + Math.round(((context.UserData.differenceCost / 60) * 100)) / 100 + '時間)/人月(' + Math.round(((context.UserData.differenceCost / 450) * 100)) / 100 + '/人日)');\n    context.Log('一括処理終了');\n}\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 6
+          }
+        ],
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    },
+    {
+      "TenantId": 1,
+      "SiteId": 11057718,
+      "Title": "サブタスク管理テーブルテンプレート",
+      "SiteName": "サブタスク",
+      "SiteGroupName": "",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Issues",
+      "ParentId": 11057716,
+      "InheritPermission": 11057716,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Issues",
+        "GridView": 3,
+        "LinkTableView": 1,
+        "GridColumns": [
+          "ClassA",
+          "ClassB",
+          "Title",
+          "StartTime",
+          "CompletionTime",
+          "Owner"
+        ],
+        "EditorColumnHash": {
+          "General": [
+            "ClassA",
+            "ClassB",
+            "_Section-1",
+            "ClassD",
+            "Title",
+            "Body",
+            "_Section-2",
+            "StartTime",
+            "CompletionTime",
+            "NumC",
+            "_Section-3",
+            "DateA",
+            "DateB",
+            "Status",
+            "CheckA",
+            "_Section-4",
+            "NumA",
+            "NumB",
+            "ClassC",
+            "Comments"
+          ]
+        },
+        "SectionLatestId": 4,
+        "Sections": [
+          {
+            "Id": 1,
+            "LabelText": "作業内容",
+            "AllowExpand": true,
+            "Expand": true
+          },
+          {
+            "Id": 2,
+            "LabelText": "予定",
+            "AllowExpand": true,
+            "Expand": true
+          },
+          {
+            "Id": 3,
+            "LabelText": "実作業",
+            "AllowExpand": true,
+            "Expand": false
+          },
+          {
+            "Id": 4,
+            "LabelText": "サマリ",
+            "AllowExpand": true,
+            "Expand": false
+          }
+        ],
+        "Columns": [
+          {
+            "ColumnName": "StartTime",
+            "LabelText": "開始予定",
+            "GridFormat": "Ymdhm",
+            "EditorFormat": "Ymdhm",
+            "ValidateRequired": true,
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "CompletionTime",
+            "LabelText": "完了予定",
+            "GridFormat": "Ymdhm",
+            "EditorFormat": "Ymdhm",
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "ClassA",
+            "LabelText": "タスクID",
+            "ChoicesText": "[[11057717]]",
+            "ValidateRequired": true,
+            "EditorReadOnly": true,
+            "Link": true,
+            "SearchType": "PartialMatch"
+          },
+          {
+            "ColumnName": "ClassB",
+            "LabelText": "タスク明細ID",
+            "AutoNumberingFormat": "[ClassA][NNNN]",
+            "AutoNumberingResetType": "String",
+            "ValidateRequired": true,
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "Title",
+            "LabelText": "サブタスク名"
+          },
+          {
+            "ColumnName": "NumA",
+            "LabelText": "予定工数",
+            "NoWrap": true,
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "NumB",
+            "LabelText": "実工数",
+            "DefaultInput": "0",
+            "ValidateRequired": true,
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "ClassC",
+            "LabelText": "予実差",
+            "DefaultInput": "0",
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "DateA",
+            "LabelText": "開始",
+            "EditorFormat": "Ymdhm",
+            "EditorReadOnly": true,
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "DateB",
+            "LabelText": "完了",
+            "EditorFormat": "Ymdhm",
+            "EditorReadOnly": true,
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "Status",
+            "ChoicesText": "100,未着手,未,status-new\n200,実施中,実,status-inprogress\n300,レビュー,レ,status-review\n900,完了,完,status-closed\n910,保留,留,status-rejected\n920,不要,不,status-rejected",
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "NumC",
+            "LabelText": "調整",
+            "DefaultInput": "0"
+          },
+          {
+            "ColumnName": "ClassD",
+            "LabelText": "メインタスク名",
+            "EditorReadOnly": true,
+            "FieldCss": "field-wide"
+          },
+          {
+            "ColumnName": "CheckA",
+            "LabelText": "不要",
+            "EditorReadOnly": true
+          }
+        ],
+        "Links": [
+          {
+            "ColumnName": "ClassA",
+            "SiteId": 11057717
+          }
+        ],
+        "Processes": [
+          {
+            "Id": 1,
+            "Name": "作業開始",
+            "DisplayName": "作業開始",
+            "CurrentStatus": 100,
+            "ChangedStatus": 200,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputDateTime",
+                "ColumnName": "DateA",
+                "BaseDateTime": "CurrentTime",
+                "Value": "0,Days"
+              }
+            ]
+          },
+          {
+            "Id": 3,
+            "Name": "レビュー実施",
+            "DisplayName": "レビュー実施",
+            "CurrentStatus": 200,
+            "ChangedStatus": 300,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 4,
+            "Name": "完了",
+            "DisplayName": "完了",
+            "CurrentStatus": 300,
+            "ChangedStatus": 900,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputDateTime",
+                "ColumnName": "DateB",
+                "BaseDateTime": "CurrentTime",
+                "Value": "0,Days"
+              }
+            ]
+          },
+          {
+            "Id": 5,
+            "Name": "完了",
+            "DisplayName": "完了",
+            "CurrentStatus": 200,
+            "ChangedStatus": 900,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputDateTime",
+                "ColumnName": "DateB",
+                "BaseDateTime": "CurrentTime",
+                "Value": "0,Days"
+              }
+            ]
+          },
+          {
+            "Id": 6,
+            "Name": "保留",
+            "DisplayName": "保留",
+            "CurrentStatus": -1,
+            "ChangedStatus": 910,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 7,
+            "Name": "再始動",
+            "DisplayName": "再始動",
+            "CurrentStatus": 910,
+            "ChangedStatus": 100,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 8,
+            "Name": "不要",
+            "DisplayName": "不要",
+            "CurrentStatus": -1,
+            "ChangedStatus": 920,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputValue",
+                "ColumnName": "CheckA",
+                "Value": "true"
+              }
+            ]
+          },
+          {
+            "Id": 9,
+            "Name": "必要",
+            "DisplayName": "必要",
+            "CurrentStatus": 920,
+            "ChangedStatus": 100,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputValue",
+                "ColumnName": "CheckA",
+                "Value": "false"
+              }
+            ]
+          }
+        ],
+        "ViewLatestId": 3,
+        "Views": [
+          {
+            "Id": 1,
+            "Name": "リンク",
+            "GridColumns": [
+              "ClassA",
+              "ClassB",
+              "Status",
+              "Title",
+              "StartTime",
+              "CompletionTime",
+              "NumA",
+              "NumB",
+              "ClassC",
+              "Owner"
+            ],
+            "ColumnFilterHash": {
+              "CheckA": "false",
+              "Status": "[\"100\",\"200\",\"300\",\"900\",\"910\"]"
+            },
+            "ColumnSorterHash": {
+              "StartTime": "asc"
+            },
+            "ApiColumnKeyDisplayType": 0,
+            "ApiColumnValueDisplayType": 0,
+            "CalendarTimePeriod": "Monthly",
+            "CalendarFromTo": "StartTime-CompletionTime",
+            "CrosstabGroupByX": "StartTime",
+            "CrosstabGroupByY": "Owner",
+            "CrosstabAggregateType": "Total",
+            "CrosstabValue": "NumA",
+            "CrosstabTimePeriod": "Monthly",
+            "ApiDataType": 0
+          },
+          {
+            "Id": 2,
+            "Name": "一覧",
+            "ColumnFilterHash": {
+              "Owner": "[\"12454\"]",
+              "Status": "[\"100\",\"200\",\"300\",\"910\"]"
+            },
+            "ColumnSorterHash": {
+              "StartTime": "asc"
+            },
+            "ApiColumnKeyDisplayType": 0,
+            "ApiColumnValueDisplayType": 0,
+            "CalendarTimePeriod": "Monthly",
+            "CalendarFromTo": "StartTime-CompletionTime",
+            "CalendarShowStatus": true,
+            "CrosstabGroupByX": "Status",
+            "CrosstabGroupByY": "Owner",
+            "CrosstabAggregateType": "Total",
+            "CrosstabValue": "NumA",
+            "CrosstabTimePeriod": "Monthly",
+            "KambanValue": "NumB",
+            "ApiDataType": 0
+          },
+          {
+            "Id": 3,
+            "Name": "カレンダー",
+            "DefaultMode": "Calendar",
+            "ColumnFilterHash": {
+              "Status": "[\"100\",\"200\",\"300\",\"910\"]"
+            },
+            "ApiColumnKeyDisplayType": 0,
+            "ApiColumnValueDisplayType": 0,
+            "CalendarTimePeriod": "Monthly",
+            "CalendarFromTo": "StartTime-CompletionTime",
+            "CrosstabGroupByX": "Status",
+            "CrosstabGroupByY": "ClassA",
+            "CrosstabAggregateType": "Total",
+            "CrosstabValue": "NumA",
+            "CrosstabTimePeriod": "Monthly",
+            "ApiDataType": 0
+          }
+        ],
+        "Styles": [
+          {
+            "Title": "背景色",
+            "New": true,
+            "Edit": true,
+            "Index": true,
+            "Calendar": true,
+            "Body": "body {\n    background-color: #808080;\n}\n\n#FieldSetGeneral{\n    background-color: #C0C0C0;\n}\n\n.grid-row{\n    background-color: #C0C0C0;\n}",
+            "Id": 1
+          },
+          {
+            "Title": "「新バージョンとして保存」を非表示にする",
+            "New": true,
+            "Edit": true,
+            "Body": "#VerUp, label[for='VerUp'] {\n    display: none;\n}\n#LinkCreations {\n    display: none;\n}",
+            "Id": 2
+          }
+        ],
+        "Scripts": [
+          {
+            "Title": "編集画面設定用($p.events.on_editor_load)",
+            "New": true,
+            "Edit": true,
+            "Body": "$p.events.on_editor_load = function () {\n    // 常に新バージョンとして保存をオン\n    let verup = $(\"#VerUp\");\n    verup.prop('checked', true);\n}",
+            "Id": 1
+          }
+        ],
+        "ServerScripts": [
+          {
+            "Title": "完了予定日が開始予定日より過去日だった場合の分単位での制御",
+            "Name": "",
+            "BeforeCreate": true,
+            "BeforeUpdate": true,
+            "Body": "try {\n    let startTime = new Date(model.StartTime);\n    let endTime = new Date(model.CompletionTime);\n    let minutes = Math.floor((endTime- startTime) / (1000 * 60));\n    if (minutes <= 0) {\n        context.Error('完了予定日が開始予定日よりも過去日です。');\n    }\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 1
+          },
+          {
+            "Title": "開始予定項目と完了予定項目から予定工数を分単位で自動設定",
+            "Name": "",
+            "BeforeCreate": true,
+            "BeforeUpdate": true,
+            "Body": "try {\n    let startTime = new Date(model.StartTime);\n    let endTime = new Date(model.CompletionTime);\n    let minutes = Math.floor((endTime- startTime) / (1000 * 60));\n    model.NumA = minutes;\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 2
+          },
+          {
+            "Title": "開始項目と完了項目から実工数項目に値を設定する",
+            "Name": "",
+            "BeforeCreate": true,
+            "BeforeUpdate": true,
+            "Body": "try {\n    if (model.DateB > 0) {\n    let start = (new Date(model.DateA)) / (1000 * 60);\n    let end = (new Date(model.DateB)) / (1000 * 60);\n    let adjustCosts = model.NumC;\n    model.NumB = end - start + adjustCosts;\n    let expectationCosts = model.NumA;\n    let actualCosts = model.NumB;\n    } else {\n        model.NumB = 0;\n    }\n} catch (ex) {\n    context.Log(ex.stack);\n}\n",
+            "TimeOut": 0,
+            "Id": 3
+          },
+          {
+            "Title": "予定工数項目と実工数項目から予実差項目に値を自動で設定する",
+            "Name": "",
+            "BeforeCreate": true,
+            "BeforeUpdate": true,
+            "Body": "try {\n    let expectationCosts = model.NumA;\n    let actualCosts = Math.round(model.NumB, 1);\n    let differenceCosts = expectationCosts - actualCosts;\n    model.ClassC = differenceCosts;\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 4
+          },
+          {
+            "Title": "標準ボタンを非表示",
+            "Name": "",
+            "BeforeOpeningPage": true,
+            "Body": "try {\n    elements.DisplayType('OpenCopyDialogCommand', 1);\n    elements.DisplayType('EditOutgoingMail', 1);\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 5
+          },
+          {
+            "Title": "メインタスク名に親レコードから取得したメインタスク名を設定する",
+            "Name": "",
+            "BeforeCreate": true,
+            "BeforeUpdate": true,
+            "Body": "let recordId = model.ClassA;\nlet siteId = 10887732;\nlet data = {\n    View: {\n        ColumnFilterHash: {\n            IssueId: recordId,\n        }\n    }\n};\nlet results = items.Get(siteId, JSON.stringify(data));\nfor (let result of results) {\n    model.ClassD = result.ClassA;\n}\n",
+            "TimeOut": 0,
+            "Id": 6
+          }
+        ],
+        "IntegratedSites": [
+          "サブタスク"
+        ],
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    },
+    {
+      "TenantId": 1,
+      "SiteId": 11057719,
+      "Title": "KPTテーブルテンプレート",
+      "SiteName": "",
+      "SiteGroupName": "",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Results",
+      "ParentId": 11057716,
+      "InheritPermission": 11057716,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Results",
+        "GridColumns": [
+          "ResultId",
+          "TitleBody",
+          "DescriptionA",
+          "DescriptionB",
+          "DescriptionC",
+          "ClassA",
+          "ClassB"
+        ],
+        "EditorColumnHash": {
+          "General": [
+            "ClassE",
+            "ClassD",
+            "DescriptionA",
+            "DescriptionB",
+            "DescriptionC",
+            "AttachmentsA",
+            "ClassA",
+            "ClassB"
+          ]
+        },
+        "Columns": [
+          {
+            "ColumnName": "Title",
+            "ValidateRequired": false
+          },
+          {
+            "ColumnName": "ClassA",
+            "LabelText": "キーワード",
+            "ExtendedHtmlAfterControl": "<button onclick=\"window.open(`https://www.google.com/search?q=${$p.getControl('ClassA').val()}`,'_blank');\"\nclass=\"button-icon\"\nstyle=\"position:absolute;left:343px;margin-top:2px;\"\ndata-icon=\"ul-icon-search\">\n    検索\n</button>"
+          },
+          {
+            "ColumnName": "ClassB",
+            "LabelText": "参考リンク"
+          },
+          {
+            "ColumnName": "DescriptionA",
+            "LabelText": "K(Keep)",
+            "Description": "できたことや継続することを入力してください。",
+            "DefaultInput": "[md]\n"
+          },
+          {
+            "ColumnName": "DescriptionB",
+            "LabelText": "P(Problem)",
+            "Description": "改善するべき問題点を入力してください。",
+            "DefaultInput": "[md]\n"
+          },
+          {
+            "ColumnName": "DescriptionC",
+            "LabelText": "T(Try)",
+            "Description": "今後挑戦したいことを入力してください。",
+            "DefaultInput": "[md]\n"
+          },
+          {
+            "ColumnName": "ClassD",
+            "LabelText": "対象明細タスク",
+            "ChoicesText": "[\r\n  {\r\n    \"SiteId\": 11057718,\r\n    \"View\": {\r\n      \"ColumnFilterExpressions\": {\r\n        \"ClassA\": \"[@ClassE]\"\r\n      }\r\n    }\r\n  }\r\n]",
+            "MultipleSelections": true
+          },
+          {
+            "ColumnName": "ClassE",
+            "LabelText": "タスクID",
+            "ChoicesText": "[[11057717]]",
+            "ValidateRequired": true,
+            "EditorReadOnly": true,
+            "Link": true,
+            "SearchType": "PartialMatch"
+          }
+        ],
+        "Links": [
+          {
+            "ColumnName": "ClassE",
+            "SiteId": 11057717
+          },
+          {
+            "ColumnName": "ClassD",
+            "SiteId": 11057718,
+            "View": {
+              "Id": 0,
+              "ColumnFilterExpressions": {
+                "ClassA": "[@ClassE]"
+              },
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "JsonFormat": true
+          }
+        ],
+        "Processes": [
+          {
+            "Id": 1,
+            "Name": "削除",
+            "DisplayName": "削除",
+            "CurrentStatus": -1,
+            "ChangedStatus": -1,
+            "OnClick": "$p.ex.execDeleteRecord();",
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          }
+        ],
+        "Styles": [
+          {
+            "Title": "背景色",
+            "New": true,
+            "Edit": true,
+            "Index": true,
+            "Body": "body {\n    background-color: #808080;\n}\n\n#FieldSetGeneral{\n    background-color: #C0C0C0;\n}\n\n.grid-row{\n    background-color: #C0C0C0;\n}",
+            "Id": 1
+          },
+          {
+            "Title": "「新バージョンとして保存」を非表示にする",
+            "New": true,
+            "Edit": true,
+            "Body": "#VerUp, label[for='VerUp'] {\n    display: none;\n}\n#LinkCreations {\n    display: none;\n}",
+            "Id": 2
+          }
+        ],
+        "Scripts": [
+          {
+            "Title": "内容の差分内容の表示",
+            "New": true,
+            "Edit": true,
+            "Body": "(function () {\n    // テーブルの種類を指定（期限付きテーブルの場合はIssues、記録テーブルの場合はResults）\n    var tableType = 'Results';\n    // 差分を確認したい項目IDと表示名を指定\n    var targetColumnId = 'Body';\n    var targetColumnName = '内容';\n    // 編集前と編集後の値を格納する変数\n    var value1 = '';\n    var value2 = '';\n    // 外部ライブラリの読み込み（jsdiff／diff2html）\n    var script1 = document.createElement('script');\n    var script2 = document.createElement('script');\n    var script3 = document.createElement('script');\n    var css1 = document.createElement('link');\n    script1.src = 'https://cdnjs.cloudflare.com/ajax/libs/jsdiff/3.4.0/diff.min.js';\n    script2.src = 'https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.3.3/diff2html.min.js';\n    script3.src = 'https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.3.3/diff2html-ui.min.js';\n    css1.setAttribute('rel', 'stylesheet');\n    css1.setAttribute('type', 'text/css');\n    css1.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.3.3/diff2html.min.css');\n    document.body.appendChild(script1);\n    document.body.appendChild(script2);\n    document.body.appendChild(script3);\n    document.body.appendChild(css1);\n    // 編集画面ロード時の値を取得する\n    $p.events.on_editor_load = function () {\n        value1 = $p.getControl(targetColumnId).val();\n    };\n    // 対象項目を変更したタイミングで値を取得して差分を表示する\n    $(document).on('change', '#' + tableType + '_' + targetColumnId, function () {\n        value2 = $p.getControl(targetColumnId).val();\n        diff2html();\n    });\n    // 編集画面の下部に対象項目の編集前後の差分を表示する関数\n    function diff2html() {\n        $('#diff2html').remove();\n        $(\"#Editor\").after('<div id=\"diff2html\" style=\"display:inline-block;\"></div>');\n        $('#diff2html').css(\"width\",\"calc(100% - 250px)\");\n        html = '<div id=\"app\">';\n        $('#diff2html').append(html);\n        unifiedDiff = JsDiff.createPatch(targetColumnName, value1, value2, 'before', 'after');\n        diff2htmlUi = new Diff2HtmlUI({diff: unifiedDiff});\n        diff2htmlUi.draw('#app', {inputFormat: 'json', outputFormat: 'side-by-side', matching: 'lines'});\n    };\n})();",
+            "Id": 1
+          },
+          {
+            "Title": "ボタンクリック時のレコード削除イベント",
+            "Index": true,
+            "Body": "// クライアントスクリプト\ntry {\n    // my-row-buttonがクリックされたときのイベント\n    $(document).on('click', '.my-row-button', function (event) {\n        // レコードのIDをコンソールに出力\n        $p.apiDelete({\n        id: $(this).data('id'),\n        done: function (data) {\n            location.reload();\n        }\n    });\n        // 編集画面が開かないようにイベントの伝搬を停止\n        event.stopImmediatePropagation();\n    });\n} catch (ex) {\n    console.log(ex.stack)\n}",
+            "Id": 2
+          },
+          {
+            "Title": "レコードを削除する",
+            "Edit": true,
+            "Body": "$p.ex.execDeleteRecord = function () {\n    const siteId = 0;\n    try {\n        // レコードのIDをコンソールに出力\n        $p.apiDelete({\n            id: $p.id(),\n            done: function (data) {\n                window.location.href = 'https://pleasanter.net/fs/items/' + siteId + '/index'\n            }\n        });\n    } catch (ex) {\n        console.log(ex.stack)\n    }\n}",
+            "Id": 4
+          },
+          {
+            "Title": "編集画面設定用($p.events.on_editor_load)",
+            "Edit": true,
+            "Body": "$p.events.on_editor_load = function () {\n    // 常に新バージョンとして保存をオン\n    let verup = $(\"#VerUp\");\n    verup.prop('checked', true);\n\n    // リンクボタンの表示\n    $('#Results_ClassBField').after('<button type=\"button\" style=\"display:block;float:left;height:30px;padding:7px 12px;border:solid 1px silver;background-color:white;\" onclick=\"Transition()\">リンク</button>');\n};\nfunction Transition() {\n    open($p.getControl('ClassB').val());\n}",
+            "Id": 5
+          },
+          {
+            "Title": "一覧画面($p.events.on_grid_load)",
+            "Index": true,
+            "Body": "$p.events.on_grid_load = function () {\n    // リンク列にリンクを設定\n    let table = document.getElementById('Grid');\n    let colNum = $p.getGridColumnIndex('ClassB');\n    for (let row of table.rows) {\n        console.log(row.className);\n        if (row.className === 'grid-row') {\n            let urlText = row.cells[colNum].textContent;\n            const a1 = document.createElement(\"a\");\n            a1.href = urlText;\n            a1.target = \"_blank\";\n            a1.innerText = urlText;\n            row.cells[colNum].textContent = \"\";\n            row.cells[colNum].appendChild(a1);\n        }\n    }\n}",
+            "Id": 6
+          }
+        ],
+        "ServerScripts": [
+          {
+            "Title": "一覧画面の行に削除ボタンを配置",
+            "Name": "",
+            "BeforeOpeningRow": true,
+            "Body": "// サーバスクリプト\ntry {\n    // 「data-id=\"${model.ResultId}\"」でボタンを表示する行を指定\n    let html = `<button data-id=\"${model.ResultId}\"class=\"button-icon my-row-button\"data-icon=\"ui-icon-circle-triangle-e\">削除</button>`;\n    // 該当業のClassA列に「削除」ボタンを表示\n    columns.ClassA.RawText = html;\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 1
+          },
+          {
+            "Title": "新規・編集画面にある標準の削除・コピー・メールボタンを非表示にする",
+            "Name": "",
+            "BeforeOpeningPage": true,
+            "Body": "    elements.DisplayType('DeleteCommand', 3);  // 削除\n    elements.DisplayType('OpenCopyDialogCommand', 3);  // コピー\n    elements.DisplayType('EditOutgoingMail', 3);  // メール",
+            "TimeOut": 0,
+            "Id": 2
+          },
+          {
+            "Title": "一覧画面の一括削除・インポート・エクスポートボタンを非表示にする",
+            "Name": "",
+            "BeforeOpeningPage": true,
+            "Body": "// 一覧画面\nif (context.Action === 'index') {\n    elements.DisplayType('BulkDeleteCommand', 3);  // 一括削除\n    elements.DisplayType('EditImportSettings', 3);  // インポート\n    elements.DisplayType('OpenExportSelectorDialogCommand', 3);  // エクスポート\n}",
+            "TimeOut": 0,
+            "Id": 3
+          }
+        ],
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    },
+    {
+      "TenantId": 1,
+      "SiteId": 11057720,
+      "Title": "空いている時間に着手タスクテーブルテンプレート",
+      "SiteName": "",
+      "SiteGroupName": "",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Results",
+      "ParentId": 11057715,
+      "InheritPermission": 11057715,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Results",
+        "GridView": 1,
+        "GridColumns": [
+          "ResultId",
+          "Status",
+          "TitleBody",
+          "ClassA",
+          "ClassB"
+        ],
+        "EditorColumnHash": {
+          "General": [
+            "ResultId",
+            "Title",
+            "Body",
+            "AttachmentsA",
+            "ClassA",
+            "ClassB",
+            "Status"
+          ]
+        },
+        "Columns": [
+          {
+            "ColumnName": "Title",
+            "ValidateRequired": false
+          },
+          {
+            "ColumnName": "ClassA",
+            "LabelText": "キーワード",
+            "ExtendedHtmlAfterControl": "<button onclick=\"window.open(`https://www.google.com/search?q=${$p.getControl('ClassA').val()}`,'_blank');\"\nclass=\"button-icon\"\nstyle=\"position:absolute;left:343px;margin-top:2px;\"\ndata-icon=\"ul-icon-search\">\n    検索\n</button>"
+          },
+          {
+            "ColumnName": "ClassB",
+            "LabelText": "リンク"
+          }
+        ],
+        "Processes": [
+          {
+            "Id": 1,
+            "Name": "削除",
+            "DisplayName": "削除",
+            "CurrentStatus": -1,
+            "ChangedStatus": -1,
+            "OnClick": "$p.ex.execDeleteRecord();",
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          }
+        ],
+        "ViewLatestId": 1,
+        "Views": [
+          {
+            "Id": 1,
+            "Name": "一覧",
+            "DefaultMode": "Index",
+            "ColumnFilterHash": {
+              "Status": "[\"100\",\"150\",\"200\",\"300\",\"910\"]"
+            },
+            "ApiColumnKeyDisplayType": 0,
+            "ApiColumnValueDisplayType": 0,
+            "ApiDataType": 0
+          }
+        ],
+        "Styles": [
+          {
+            "Title": "背景色",
+            "New": true,
+            "Edit": true,
+            "Index": true,
+            "Body": "body {\n    background-color: #808080;\n}\n\n#FieldSetGeneral{\n    background-color: #C0C0C0;\n}\n\n.grid-row{\n    background-color: #C0C0C0;\n}",
+            "Id": 1
+          }
+        ],
+        "Scripts": [
+          {
+            "Title": "内容の差分内容の表示",
+            "New": true,
+            "Edit": true,
+            "Body": "(function () {\n    // テーブルの種類を指定（期限付きテーブルの場合はIssues、記録テーブルの場合はResults）\n    var tableType = 'Results';\n    // 差分を確認したい項目IDと表示名を指定\n    var targetColumnId = 'Body';\n    var targetColumnName = '内容';\n    // 編集前と編集後の値を格納する変数\n    var value1 = '';\n    var value2 = '';\n    // 外部ライブラリの読み込み（jsdiff／diff2html）\n    var script1 = document.createElement('script');\n    var script2 = document.createElement('script');\n    var script3 = document.createElement('script');\n    var css1 = document.createElement('link');\n    script1.src = 'https://cdnjs.cloudflare.com/ajax/libs/jsdiff/3.4.0/diff.min.js';\n    script2.src = 'https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.3.3/diff2html.min.js';\n    script3.src = 'https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.3.3/diff2html-ui.min.js';\n    css1.setAttribute('rel', 'stylesheet');\n    css1.setAttribute('type', 'text/css');\n    css1.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.3.3/diff2html.min.css');\n    document.body.appendChild(script1);\n    document.body.appendChild(script2);\n    document.body.appendChild(script3);\n    document.body.appendChild(css1);\n    // 編集画面ロード時の値を取得する\n    $p.events.on_editor_load = function () {\n        value1 = $p.getControl(targetColumnId).val();\n    };\n    // 対象項目を変更したタイミングで値を取得して差分を表示する\n    $(document).on('change', '#' + tableType + '_' + targetColumnId, function () {\n        value2 = $p.getControl(targetColumnId).val();\n        diff2html();\n    });\n    // 編集画面の下部に対象項目の編集前後の差分を表示する関数\n    function diff2html() {\n        $('#diff2html').remove();\n        $(\"#Editor\").after('<div id=\"diff2html\" style=\"display:inline-block;\"></div>');\n        $('#diff2html').css(\"width\",\"calc(100% - 250px)\");\n        html = '<div id=\"app\">';\n        $('#diff2html').append(html);\n        unifiedDiff = JsDiff.createPatch(targetColumnName, value1, value2, 'before', 'after');\n        diff2htmlUi = new Diff2HtmlUI({diff: unifiedDiff});\n        diff2htmlUi.draw('#app', {inputFormat: 'json', outputFormat: 'side-by-side', matching: 'lines'});\n    };\n})();",
+            "Id": 1
+          },
+          {
+            "Title": "ボタンクリック時のレコード削除イベント",
+            "Index": true,
+            "Body": "// クライアントスクリプト\ntry {\n    // my-row-buttonがクリックされたときのイベント\n    $(document).on('click', '.my-row-button', function (event) {\n        // レコードのIDをコンソールに出力\n        $p.apiDelete({\n        id: $(this).data('id'),\n        done: function (data) {\n            location.reload();\n        }\n    });\n        // 編集画面が開かないようにイベントの伝搬を停止\n        event.stopImmediatePropagation();\n    });\n} catch (ex) {\n    console.log(ex.stack)\n}",
+            "Id": 2
+          },
+          {
+            "Title": "レコードを削除する",
+            "Edit": true,
+            "Body": "$p.ex.execDeleteRecord = function () {\n    const siteId = 0;\n    try {\n        // レコードのIDをコンソールに出力\n        $p.apiDelete({\n            id: $p.id(),\n            done: function (data) {\n                window.location.href = 'https://pleasanter.net/fs/items/' + siteId + '/index'\n            }\n        });\n    } catch (ex) {\n        console.log(ex.stack)\n    }\n}",
+            "Id": 4
+          },
+          {
+            "Title": "編集画面設定用($p.events.on_editor_load)",
+            "Edit": true,
+            "Body": "$p.events.on_editor_load = function () {\n    // 常に新バージョンとして保存をオン\n    let verup = $(\"#VerUp\");\n    verup.prop('checked', true);\n\n    // リンクボタンの表示\n    $('#Results_ClassBField').after('<button type=\"button\" style=\"display:block;float:left;height:30px;padding:7px 12px;border:solid 1px silver;background-color:white;\" onclick=\"Transition()\">リンク</button>');\n};\nfunction Transition() {\n    open($p.getControl('ClassB').val());\n}",
+            "Id": 5
+          },
+          {
+            "Title": "一覧画面($p.events.on_grid_load)",
+            "Index": true,
+            "Body": "$p.events.on_grid_load = function () {\n    // リンク列にリンクを設定\n    let table = document.getElementById('Grid');\n    let colNum = $p.getGridColumnIndex('ClassB');\n    for (let row of table.rows) {\n        console.log(row.className);\n        if (row.className === 'grid-row') {\n            let urlText = row.cells[colNum].textContent;\n            const a1 = document.createElement(\"a\");\n            a1.href = urlText;\n            a1.target = \"_blank\";\n            a1.innerText = urlText;\n            row.cells[colNum].textContent = \"\";\n            row.cells[colNum].appendChild(a1);\n        }\n    }\n}",
+            "Id": 6
+          }
+        ],
+        "ServerScripts": [
+          {
+            "Title": "一覧画面の行に削除ボタンを配置",
+            "Name": "",
+            "BeforeOpeningRow": true,
+            "Body": "// サーバスクリプト\ntry {\n    // 「data-id=\"${model.ResultId}\"」でボタンを表示する行を指定\n    let html = `<button data-id=\"${model.ResultId}\"class=\"button-icon my-row-button\"data-icon=\"ui-icon-circle-triangle-e\">削除</button>`;\n    // 該当業のClassA列に「削除」ボタンを表示\n    columns.ClassA.RawText = html;\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 1
+          },
+          {
+            "Title": "新規・編集画面にある標準の削除・コピー・メールボタンを非表示にする",
+            "Name": "",
+            "BeforeOpeningPage": true,
+            "Body": "    elements.DisplayType('DeleteCommand', 3);  // 削除\n    elements.DisplayType('OpenCopyDialogCommand', 3);  // コピー\n    elements.DisplayType('EditOutgoingMail', 3);  // メール",
+            "TimeOut": 0,
+            "Id": 2
+          },
+          {
+            "Title": "一覧画面の一括削除・インポート・エクスポートボタンを非表示にする",
+            "Name": "",
+            "BeforeOpeningPage": true,
+            "Body": "// 一覧画面\nif (context.Action === 'index') {\n    elements.DisplayType('BulkDeleteCommand', 3);  // 一括削除\n    elements.DisplayType('EditImportSettings', 3);  // インポート\n    elements.DisplayType('OpenExportSelectorDialogCommand', 3);  // エクスポート\n}",
+            "TimeOut": 0,
+            "Id": 3
+          }
+        ],
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    },
+    {
+      "TenantId": 1,
+      "SiteId": 11057721,
+      "Title": "社内案件タスク管理テンプレート",
+      "SiteName": "",
+      "SiteGroupName": "",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Sites",
+      "ParentId": 11057715,
+      "InheritPermission": 11057721,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Sites",
+        "Styles": [
+          {
+            "Title": "背景色",
+            "All": true,
+            "Body": "body {\n    background-color: #808080;\n}\n\n#FieldSetGeneral{\n    background-color: #C0C0C0;\n}\n\n.grid-row{\n    background-color: #C0C0C0;\n}",
+            "Id": 1
+          }
+        ],
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    },
+    {
+      "TenantId": 1,
+      "SiteId": 11057722,
+      "Title": "メインタスク管理テーブルテンプレート",
+      "SiteName": "",
+      "SiteGroupName": "",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Issues",
+      "ParentId": 11057721,
+      "InheritPermission": 11057721,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Issues",
+        "GridView": 2,
+        "LinkTableView": 1,
+        "GridColumns": [
+          "IssueId",
+          "ClassA",
+          "StartTime",
+          "CompletionTime",
+          "NumA",
+          "NumB",
+          "ClassB",
+          "Manager"
+        ],
+        "EditorColumnHash": {
+          "General": [
+            "IssueId",
+            "_Section-1",
+            "ClassA",
+            "Body",
+            "Manager",
+            "ClassC",
+            "_Section-2",
+            "StartTime",
+            "CompletionTime",
+            "_Section-3",
+            "DateA",
+            "DateB",
+            "Status",
+            "CheckA",
+            "_Section-4",
+            "NumA",
+            "NumB",
+            "ClassB",
+            "Comments"
+          ]
+        },
+        "SectionLatestId": 4,
+        "Sections": [
+          {
+            "Id": 1,
+            "LabelText": "作業内容",
+            "AllowExpand": true,
+            "Expand": true
+          },
+          {
+            "Id": 2,
+            "LabelText": "予定",
+            "AllowExpand": true,
+            "Expand": false
+          },
+          {
+            "Id": 3,
+            "LabelText": "実作業",
+            "AllowExpand": true,
+            "Expand": false
+          },
+          {
+            "Id": 4,
+            "LabelText": "サマリ",
+            "AllowExpand": true,
+            "Expand": false
+          }
+        ],
+        "TitleColumns": [
+          "Title",
+          "IssueId"
+        ],
+        "Columns": [
+          {
+            "ColumnName": "StartTime",
+            "LabelText": "開始予定",
+            "GridFormat": "Ymdahm",
+            "EditorFormat": "Ymdhm",
+            "ValidateRequired": true,
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "CompletionTime",
+            "LabelText": "完了予定",
+            "GridFormat": "Ymdahm",
+            "EditorFormat": "Ymdhm",
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "Owner",
+            "NoWrap": true,
+            "ValidateRequired": true
+          },
+          {
+            "ColumnName": "NumA",
+            "LabelText": "予定工数",
+            "NoWrap": true,
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "NumB",
+            "LabelText": "実工数"
+          },
+          {
+            "ColumnName": "ClassB",
+            "LabelText": "予実差",
+            "DefaultInput": "0",
+            "ValidateRequired": true,
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "IssueId",
+            "LabelText": "メインタスクID"
+          },
+          {
+            "ColumnName": "ClassA",
+            "LabelText": "メインタスク",
+            "NoWrap": true,
+            "ValidateRequired": true,
+            "FieldCss": "field-wide"
+          },
+          {
+            "ColumnName": "Title",
+            "LabelText": "メインタスクID",
+            "ValidateRequired": false
+          },
+          {
+            "ColumnName": "ClassC",
+            "LabelText": "参考リンク"
+          },
+          {
+            "ColumnName": "DateA",
+            "LabelText": "開始",
+            "EditorFormat": "Ymdhm",
+            "EditorReadOnly": true,
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "DateB",
+            "LabelText": "完了",
+            "EditorFormat": "Ymdhm",
+            "EditorReadOnly": true,
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "Status",
+            "ChoicesText": "100,未着手,未,status-new\n150,準備,準,status-preparation\n200,実施中,実,status-inprogress\n300,レビュー,レ,status-review\n900,完了,完,status-closed\n910,保留,留,status-rejected\n920,不要,留,status-rejected",
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "Manager",
+            "ValidateRequired": true
+          },
+          {
+            "ColumnName": "CheckA",
+            "LabelText": "不要",
+            "EditorReadOnly": true
+          }
+        ],
+        "Processes": [
+          {
+            "Id": 1,
+            "Name": "作業開始",
+            "DisplayName": "作業開始",
+            "CurrentStatus": 150,
+            "ChangedStatus": 200,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputDateTime",
+                "ColumnName": "DateA",
+                "BaseDateTime": "CurrentTime",
+                "Value": "0,Days"
+              }
+            ]
+          },
+          {
+            "Id": 3,
+            "Name": "レビュー実施",
+            "DisplayName": "レビュー実施",
+            "CurrentStatus": 200,
+            "ChangedStatus": 300,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 4,
+            "Name": "完了",
+            "DisplayName": "完了",
+            "CurrentStatus": 300,
+            "ChangedStatus": 900,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputDateTime",
+                "ColumnName": "DateB",
+                "BaseDateTime": "CurrentTime",
+                "Value": "0,Days"
+              }
+            ]
+          },
+          {
+            "Id": 5,
+            "Name": "完了",
+            "DisplayName": "完了",
+            "CurrentStatus": 200,
+            "ChangedStatus": 900,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputDateTime",
+                "ColumnName": "DateB",
+                "BaseDateTime": "CurrentTime",
+                "Value": "0,Days"
+              }
+            ]
+          },
+          {
+            "Id": 6,
+            "Name": "保留",
+            "DisplayName": "保留",
+            "CurrentStatus": -1,
+            "ChangedStatus": 910,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 7,
+            "Name": "準備",
+            "DisplayName": "準備",
+            "ScreenType": 10,
+            "CurrentStatus": 100,
+            "ChangedStatus": 150,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 8,
+            "Name": "再始動",
+            "DisplayName": "再始動",
+            "CurrentStatus": 910,
+            "ChangedStatus": 150,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 9,
+            "Name": "不要",
+            "DisplayName": "不要",
+            "CurrentStatus": -1,
+            "ChangedStatus": 920,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputValue",
+                "ColumnName": "CheckA",
+                "Value": "true"
+              }
+            ]
+          },
+          {
+            "Id": 10,
+            "Name": "工数集計",
+            "DisplayName": "工数集計",
+            "CurrentStatus": -1,
+            "ChangedStatus": -1,
+            "AllowBulkProcessing": true,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          }
+        ],
+        "ViewLatestId": 2,
+        "Views": [
+          {
+            "Id": 1,
+            "Name": "リンク",
+            "ApiColumnKeyDisplayType": 0,
+            "ApiColumnValueDisplayType": 0,
+            "ApiDataType": 0
+          },
+          {
+            "Id": 2,
+            "Name": "一覧",
+            "DefaultMode": "Index",
+            "GridColumns": [
+              "IssueId",
+              "Status",
+              "ClassA",
+              "StartTime",
+              "CompletionTime",
+              "DateA",
+              "DateB",
+              "NumA",
+              "NumB",
+              "ClassB",
+              "Manager"
+            ],
+            "ColumnFilterHash": {
+              "Status": "[\"100\",\"150\",\"200\",\"300\",\"910\"]"
+            },
+            "ColumnSorterHash": {
+              "DateA": "asc"
+            },
+            "ApiColumnKeyDisplayType": 0,
+            "ApiColumnValueDisplayType": 0,
+            "CalendarTimePeriod": "Monthly",
+            "CalendarFromTo": "StartTime-CompletionTime",
+            "CrosstabGroupByX": "Status",
+            "CrosstabGroupByY": "Status",
+            "CrosstabAggregateType": "Total",
+            "CrosstabValue": "NumA",
+            "CrosstabTimePeriod": "Monthly",
+            "ApiDataType": 0
+          }
+        ],
+        "Styles": [
+          {
+            "Title": "背景色",
+            "New": true,
+            "Edit": true,
+            "Index": true,
+            "Body": "body {\n    background-color: #808080;\n}\n\n#FieldSetGeneral{\n    background-color: #C0C0C0;\n}\n\n.grid-row{\n    background-color: #C0C0C0;\n}",
+            "Id": 1
+          },
+          {
+            "Title": "「新バージョンとして保存」を非表示にする",
+            "New": true,
+            "Edit": true,
+            "Body": "#VerUp, label[for='VerUp'] {\n    display: none;\n}",
+            "Id": 2
+          }
+        ],
+        "Scripts": [
+          {
+            "Title": "編集画面設定用($p.events.on_editor_load)",
+            "New": true,
+            "Edit": true,
+            "Body": "$p.events.on_editor_load = function () {\n    // 常に新バージョンとして保存をオン\n    let verup = $(\"#VerUp\");\n    verup.prop('checked', true);\n\n    // リンクボタンの表示\n    $('#Issues_ClassCField').after('<button type=\"button\" style=\"display:block;float:left;height:30px;padding:7px 12px;border:solid 1px silver;background-color:white;\" onclick=\"Transition()\">リンク</button>');\n};\nfunction Transition() {\n    open($p.getControl('ClassC').val());\n}",
+            "Id": 1
+          },
+          {
+            "Title": "内容の差分内容の表示",
+            "New": true,
+            "Edit": true,
+            "Body": "(function () {\n    // テーブルの種類を指定（期限付きテーブルの場合はIssues、記録テーブルの場合はResults）\n    var tableType = 'Issues';\n    // 差分を確認したい項目IDと表示名を指定\n    var targetColumnId = 'Body';\n    var targetColumnName = '内容';\n    // 編集前と編集後の値を格納する変数\n    var value1 = '';\n    var value2 = '';\n    // 外部ライブラリの読み込み（jsdiff／diff2html）\n    var script1 = document.createElement('script');\n    var script2 = document.createElement('script');\n    var script3 = document.createElement('script');\n    var css1 = document.createElement('link');\n    script1.src = 'https://cdnjs.cloudflare.com/ajax/libs/jsdiff/3.4.0/diff.min.js';\n    script2.src = 'https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.3.3/diff2html.min.js';\n    script3.src = 'https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.3.3/diff2html-ui.min.js';\n    css1.setAttribute('rel', 'stylesheet');\n    css1.setAttribute('type', 'text/css');\n    css1.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.3.3/diff2html.min.css');\n    document.body.appendChild(script1);\n    document.body.appendChild(script2);\n    document.body.appendChild(script3);\n    document.body.appendChild(css1);\n    // 編集画面ロード時の値を取得する\n    $p.events.on_editor_load = function () {\n        value1 = $p.getControl(targetColumnId).val();\n    };\n    // 対象項目を変更したタイミングで値を取得して差分を表示する\n    $(document).on('change', '#' + tableType + '_' + targetColumnId, function () {\n        value2 = $p.getControl(targetColumnId).val();\n        diff2html();\n    });\n    // 編集画面の下部に対象項目の編集前後の差分を表示する関数\n    function diff2html() {\n        $('#diff2html').remove();\n        $(\"#Editor\").after('<div id=\"diff2html\" style=\"display:inline-block;\"></div>');\n        $('#diff2html').css(\"width\",\"calc(100% - 250px)\");\n        html = '<div id=\"app\">';\n        $('#diff2html').append(html);\n        unifiedDiff = JsDiff.createPatch(targetColumnName, value1, value2, 'before', 'after');\n        diff2htmlUi = new Diff2HtmlUI({diff: unifiedDiff});\n        diff2htmlUi.draw('#app', {inputFormat: 'json', outputFormat: 'side-by-side', matching: 'lines'});\n    };\n})();",
+            "Id": 2
+          }
+        ],
+        "ServerScripts": [
+          {
+            "Title": "子テーブルから情報を取得する",
+            "Name": "予定工数と実工数を計上し、予実差を計算した値をそれぞれ項目に設定する・開始予定と終了予定から最も古い開始日と最も新しい終了日から値を設定する",
+            "BeforeCreate": true,
+            "BeforeUpdate": true,
+            "Body": "try {\n    if (context.Action === 'edit' || context.Action === 'update') {\n        context.Log('子テーブルから値を取得・設定する処理開始');\n        // タスク管理テーブル(詳細)テーブルのサイトIDを設定\n        const siteId = 10928177;\n        // メインタスクIDを設定\n        const mainTaskId = model.IssueId;\n        // 予定工数を計上する変数を初期化\n        let expectationCosts = 0;\n        // 実工数を計上する変数を初期化\n        let actualCosts = 0;\n        // 予実差を計上する変数を初期化\n        let differenceCosts = 0;\n        // 開始予定を設定する変数を初期化\n        let expectationStartTimes = new Array();\n        // 完了予定を設定する変数を初期化\n        let expectationEndTimes = new Array();\n        // 最も新しい開始予定を設定する変数を初期化\n        let firstStartTime = new Date();\n        // 最も古い終了予定を設定する変数を初期化\n        let lastEndTime = firstStartTime.getMinutes() + 1;\n        // サイト情報を取得\n        let data = {\n            'View': {\n                'ColumnFilterHash': {\n                    'ClassA': '[' + mainTaskId + ']',\n                    'CheckA': false\n                }\n            }\n        };\n        // リンクされている子レコードの情報を取得\n        let sites = items.Get(siteId, JSON.stringify(data));\n        if (sites) {\n            context.Log('子テーブルにリンクレコードの存在：あり');\n            // レコード数分反復\n            for (let site of sites) {\n                // 予定工数と実工数を計上する\n                calculateCost(site);\n                // 開始予定と終了予定の値を取得する\n                getTime(site);\n            }\n            // 計上した予定工数と実工数から予実差を計算し、値を設定する\n            setCost();\n            // 開始予定から値を設定する\n            setExpectationStartTime();\n            // 終了予定から値を設定する\n            setExpectationEndTime();\n        } else {\n            context.Log('子テーブルにリンクレコードの存在：なし');\n            model.ClassB = 0;\n        }\n\n\n        // ロジック箇所\n        // 予定工数と実工数を計上し、予実差を計算した値をそれぞれ項目に設定する\n        function calculateCost(site) {\n            context.Log('予定工数と実工数の取得処理開始');\n            expectationCosts += site.NumA;\n            actualCosts += site.NumB;\n            context.Log('予定工数と実工数の取得処理終了');\n        }\n        // 開始予定と終了予定の値を取得する\n        function getTime(site) {\n            context.Log('開始予定と終了予定の取得処理開始');\n            expectationStartTimes.push(site.StartTime);\n            expectationEndTimes.push(site.CompletionTime);\n            context.Log('開始予定と終了予定の取得処理終了');\n        }\n        // 計上した予定工数と実工数から予実差を計算し、値を設定する\n        function setCost() {\n            context.Log('予実差の計上処理開始');\n            differenceCosts = expectationCosts - actualCosts;\n            model.NumA = expectationCosts;\n            model.NumB = actualCosts;\n            model.ClassB = differenceCosts;\n            context.Log('予実差の計上処理終了');\n        }\n        // 開始予定から値を設定する\n        function setExpectationStartTime() {\n            let tmp;\n            let count = 1;\n            context.Log('開始予定の設定処理開始');\n            if (expectationStartTimes) {\n                context.Log('開始予定の存在：あり');\n                for (let expectationStartTime of expectationStartTimes) {\n                    if (count === 1) {\n                        firstStartTime = new Date(expectationStartTime);\n                    } else {\n                        tmp = new Date(expectationStartTime);\n                        if (tmp < firstStartTime) {\n                            firstStartTime = tmp;\n                        }\n                    }\n                    count++;\n                }\n                model.StartTime = firstStartTime;\n            } else {\n                context.Log('開始予定の存在：なし');\n                model.StartTime = firstStartTime;\n            }\n            context.Log('開始予定の設定処理終了');\n        }\n        // 終了予定から値を設定する\n        function setExpectationEndTime() {\n            let tmp;\n            let count = 1;\n            context.Log('終了予定の設定処理開始');\n            if (expectationEndTimes) {\n                context.Log('終了予定の存在：あり');\n                for (let expectationEndTime of expectationEndTimes) {\n                    if (count === 1) {\n                        lastEndTime = new Date(expectationEndTime);\n                    } else {\n                        tmp = new Date(expectationEndTime);\n                        if (tmp > lastEndTime) {\n                            lastEndTime = tmp;\n                        }\n                    }\n                    count++;\n                }\n                context.Log(lastEndTime.setHours(lastEndTime.getHours() + 9));\n                context.Log(lastEndTime.toLocaleString().slice(0,-3));\n                model.CompletionTime = lastEndTime;\n            } else {\n                context.Log('終了予定の存在：なし');\n                model.CompletionTime = lastEndTime;\n            }\n            context.Log('終了予定の設定処理終了');\n        }\n        context.Log('子テーブルから値を取得・設定する処理終了');\n    }\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 2
+          },
+          {
+            "Title": "標準ボタンを非表示",
+            "Name": "",
+            "BeforeOpeningPage": true,
+            "Body": "try {\n    elements.DisplayType('CreateCommand', 1);\n    elements.DisplayType('OpenCopyDialogCommand', 1);\n    elements.DisplayType('EditOutgoingMail', 1);\n    elements.DisplayType('DeleteCommand', 1);\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 3
+          },
+          {
+            "Title": "一覧画面の一括削除・インポート・エクスポートボタンを非表示にする",
+            "Name": "",
+            "BeforeOpeningPage": true,
+            "Body": "// 一覧画面\nif (context.Action === 'index') {\n    elements.DisplayType('BulkDeleteCommand', 3);  // 一括削除\n    elements.DisplayType('EditImportSettings', 3);  // インポート\n    elements.DisplayType('OpenExportSelectorDialogCommand', 3);  // エクスポート\n}",
+            "TimeOut": 0,
+            "Id": 5
+          },
+          {
+            "Title": "工数集計処理①",
+            "Name": "",
+            "BeforeFormula": true,
+            "AfterUpdate": true,
+            "Body": "try {\n    // 今月の予定工数を計算する変数を初期化\n    let resultExpectationCost;\n    // 今月の実工数を計算する変数を初期化\n    let resultActualCost;\n    // 今月の予実差を計算する変数を初期化\n    let resultDifferenceCost;\n    // 今月工数を設定する変数を初期化\n    let thisMonthCost;\n    // 今月の稼働日数を設定する変数を初期化\n    let thisMonthDays;\n    // 編集画面\n    if (context.ControlId === 'Process_1') {\n        // 予定工数を設定する変数を初期化\n        let expectationCost;\n        // 実工数を設定する変数を初期化\n        let actualCost;\n        // 予実差を設定する変数を初期化\n        let differenceCost;\n        context.Log('工数計算処理開始');\n        expectationCost = model.NumA;\n        actualCost = model.NumB;\n        differenceCost = model.ClassB;\n        inputDialog();\n        calculateCost();\n        context.Log('工数計算処理終了');\n        // 一覧画面にて\n    } else if (context.ControlId === 'BulkProcessCommand') {\n        context.Log('工数計算処理開始');\n        context.Log('レコードID：' + model.IssueId + ', タスク名：' + model.ClassA);\n        context.Log('予定工数：' + model.NumA + '実工数：' + model.NumB + '予実差：' + Number(model.ClassB))\n        if (!context.UserData.expectationCost) context.UserData.expectationCost = 0;\n        if (!context.UserData.actualCost) context.UserData.actualCost = 0;\n        if (!context.UserData.differenceCost) context.UserData.differenceCost = 0;\n        context.UserData.expectationCost += model.NumA;\n        context.Log(context.UserData.expectationCost);\n        context.UserData.actualCost += model.NumB;\n        context.Log(context.UserData.actualCost);\n        context.UserData.differenceCost += Number(model.ClassB);\n        context.Log(context.UserData.differenceCost);\n        context.Log('工数計算処理終了');\n    }\n\n    function inputDialog() {\n        context.Log('今月の工数設定処理開始');\n        thisMonthDays = window.prompt(\"今月の稼働日数を入力してください。\", \"\");\n        context.Log('今月の稼働日数：' + thisMonthDays);\n        thisMonthCost = thisMonthDays * 450;\n        context.Log('今月工数(450分/日)：' + thisMonthCost)\n        context.Log('今月の工数設定処理終了');\n    }\n    function calculateCost() {\n        context.Log('今月の工数計算処理開始');\n        context.Log('予定工数を計算');\n        resultExpectationCost = expectationCost / thisMonthCost;\n        context.Log('実工数を計算');\n        resultActualCost = actualCost / thisMonthCost;\n        context.Log('予実差を計算')\n        resultDifferenceCost = differenceCost / thisMonthCost;\n        context.Log('予定工数：' + resultExpectationCost + '/人月');\n        context.Log('実工数：' + resultActualCost + '/人月');\n        context.Log('予実差：' + resultDifferenceCost + '/人月');\n        context.Log('今月の工数計算処理終了');\n    }\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 6
+          },
+          {
+            "Title": "工数集計処理②",
+            "Name": "",
+            "BeforeOpeningPage": true,
+            "Body": "try {\n    // 今月の予定工数を計算する変数を初期化\n    let resultExpectationCost;\n    // 今月の実工数を計算する変数を初期化\n    let resultActualCost;\n    // 今月の予実差を計算する変数を初期化\n    let resultDifferenceCost;\n    // 今月工数を設定する変数を初期化\n    let thisMonthCost;\n    // 今月の稼働日数を設定する変数を初期化\n    let thisMonthDays = 20;\n// 一覧画面\nif (context.ControlId === 'BulkProcessCommand') {\n    context.Log('一括処理開始');\n    context.Log('予定工数：' + context.UserData.expectationCost);\n    context.Log('実工数：' + context.UserData.actualCost);\n    context.Log('予実差：' + context.UserData.differenceCost);\n    context.Log('今月の稼働日数：' + thisMonthDays);\n    thisMonthCost = thisMonthDays * 450;\n    context.Log('今月工数(450分/日)：' + thisMonthCost)\n    context.Log('予定工数を計算');\n    resultExpectationCost = context.UserData.expectationCost / thisMonthCost * 100;\n    context.Log('実工数を計算');\n    resultActualCost = context.UserData.actualCost / thisMonthCost * 100;\n    context.Log('予実差を計算');\n    resultDifferenceCost = context.UserData.differenceCost / thisMonthCost * 100;\n    context.Log('予定工数：' + (Math.round(resultExpectationCost) / 100) + '(' + Math.round(((context.UserData.expectationCost / 60) * 100)) / 100 + '時間)/人月(' + Math.round(((context.UserData.expectationCost / 450) * 100)) / 100 + '/人日)');\n    context.Log('実工数：' + (Math.round(resultActualCost) / 100) + '(' + Math.round(((context.UserData.actualCost / 60) * 100)) / 100 + '時間)/人月(' + Math.round(((context.UserData.actualCost / 450) * 100)) / 100 + '/人日)');\n    context.Log('予実差：' + (Math.round(resultDifferenceCost) / 100) + '(' + Math.round(((context.UserData.differenceCost / 60) * 100)) / 100 + '時間)/人月(' + Math.round(((context.UserData.differenceCost / 450) * 100)) / 100 + '/人日)');\n    context.Log('一括処理終了');\n}\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 7
+          }
+        ],
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    },
+    {
+      "TenantId": 1,
+      "SiteId": 11057723,
+      "Title": "サブタスク管理テーブルテンプレート",
+      "SiteName": "サブタスク",
+      "SiteGroupName": "",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Issues",
+      "ParentId": 11057721,
+      "InheritPermission": 11057721,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Issues",
+        "GridView": 2,
+        "LinkTableView": 1,
+        "GridColumns": [
+          "ClassA",
+          "ClassB",
+          "Title",
+          "StartTime",
+          "CompletionTime",
+          "Owner"
+        ],
+        "EditorColumnHash": {
+          "General": [
+            "ClassA",
+            "ClassB",
+            "_Section-1",
+            "ClassD",
+            "Title",
+            "Body",
+            "Owner",
+            "DescriptionA",
+            "AttachmentsA",
+            "_Section-2",
+            "StartTime",
+            "CompletionTime",
+            "NumC",
+            "_Section-3",
+            "DateA",
+            "DateB",
+            "Status",
+            "CheckA",
+            "_Section-4",
+            "NumA",
+            "NumB",
+            "ClassC",
+            "Comments"
+          ]
+        },
+        "SectionLatestId": 4,
+        "Sections": [
+          {
+            "Id": 1,
+            "LabelText": "作業内容",
+            "AllowExpand": true,
+            "Expand": true
+          },
+          {
+            "Id": 2,
+            "LabelText": "予定",
+            "AllowExpand": true,
+            "Expand": true
+          },
+          {
+            "Id": 3,
+            "LabelText": "実作業",
+            "AllowExpand": true,
+            "Expand": false
+          },
+          {
+            "Id": 4,
+            "LabelText": "サマリ",
+            "AllowExpand": true,
+            "Expand": false
+          }
+        ],
+        "Columns": [
+          {
+            "ColumnName": "StartTime",
+            "LabelText": "開始予定",
+            "GridFormat": "Ymdhm",
+            "EditorFormat": "Ymdhm",
+            "ValidateRequired": true,
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "CompletionTime",
+            "LabelText": "完了予定",
+            "GridFormat": "Ymdhm",
+            "EditorFormat": "Ymdhm",
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "ClassA",
+            "LabelText": "タスクID",
+            "ChoicesText": "[[11057722]]",
+            "ValidateRequired": true,
+            "EditorReadOnly": true,
+            "Link": true,
+            "SearchType": "PartialMatch"
+          },
+          {
+            "ColumnName": "ClassB",
+            "LabelText": "タスク明細ID",
+            "AutoNumberingFormat": "[ClassA][NNNN]",
+            "AutoNumberingResetType": "String",
+            "ValidateRequired": true,
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "Title",
+            "LabelText": "サブタスク名"
+          },
+          {
+            "ColumnName": "NumA",
+            "LabelText": "予定工数",
+            "NoWrap": true
+          },
+          {
+            "ColumnName": "NumB",
+            "LabelText": "実工数",
+            "DefaultInput": "0",
+            "ValidateRequired": true,
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "ClassC",
+            "LabelText": "予実差",
+            "DefaultInput": "0"
+          },
+          {
+            "ColumnName": "DateA",
+            "LabelText": "開始",
+            "EditorFormat": "Ymdhm",
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "DateB",
+            "LabelText": "完了",
+            "EditorFormat": "Ymdhm",
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "Status",
+            "ChoicesText": "100,未着手,未,status-new\n200,実施中,実,status-inprogress\n300,レビュー,レ,status-review\n900,完了,完,status-closed\n910,保留,留,status-rejected\n920,不要,不,status-rejected",
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "NumC",
+            "LabelText": "調整",
+            "DefaultInput": "0"
+          },
+          {
+            "ColumnName": "DescriptionA",
+            "LabelText": "備考"
+          },
+          {
+            "ColumnName": "AttachmentsA",
+            "LabelText": "添付ファイル"
+          },
+          {
+            "ColumnName": "ClassD",
+            "LabelText": "メインタスク名",
+            "EditorReadOnly": true,
+            "FieldCss": "field-wide"
+          },
+          {
+            "ColumnName": "CheckA",
+            "LabelText": "不要"
+          }
+        ],
+        "Links": [
+          {
+            "ColumnName": "ClassA",
+            "SiteId": 11057722
+          }
+        ],
+        "Processes": [
+          {
+            "Id": 1,
+            "Name": "作業開始",
+            "DisplayName": "作業開始",
+            "CurrentStatus": 100,
+            "ChangedStatus": 200,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputDateTime",
+                "ColumnName": "DateA",
+                "BaseDateTime": "CurrentTime",
+                "Value": "0,Days"
+              }
+            ]
+          },
+          {
+            "Id": 3,
+            "Name": "レビュー実施",
+            "DisplayName": "レビュー実施",
+            "CurrentStatus": 200,
+            "ChangedStatus": 300,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 4,
+            "Name": "完了",
+            "DisplayName": "完了",
+            "CurrentStatus": 300,
+            "ChangedStatus": 900,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputDateTime",
+                "ColumnName": "DateB",
+                "BaseDateTime": "CurrentTime",
+                "Value": "0,Days"
+              }
+            ]
+          },
+          {
+            "Id": 5,
+            "Name": "完了",
+            "DisplayName": "完了",
+            "CurrentStatus": 200,
+            "ChangedStatus": 900,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputDateTime",
+                "ColumnName": "DateB",
+                "BaseDateTime": "CurrentTime",
+                "Value": "0,Days"
+              }
+            ]
+          },
+          {
+            "Id": 6,
+            "Name": "保留",
+            "DisplayName": "保留",
+            "CurrentStatus": -1,
+            "ChangedStatus": 910,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 7,
+            "Name": "再始動",
+            "DisplayName": "再始動",
+            "CurrentStatus": 910,
+            "ChangedStatus": 100,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 8,
+            "Name": "不要",
+            "DisplayName": "不要",
+            "CurrentStatus": -1,
+            "ChangedStatus": 920,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputValue",
+                "ColumnName": "CheckA",
+                "Value": "true"
+              }
+            ]
+          },
+          {
+            "Id": 9,
+            "Name": "必要",
+            "DisplayName": "必要",
+            "CurrentStatus": 920,
+            "ChangedStatus": 100,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputValue",
+                "ColumnName": "CheckA",
+                "Value": "false"
+              }
+            ]
+          }
+        ],
+        "ViewLatestId": 2,
+        "Views": [
+          {
+            "Id": 1,
+            "Name": "リンク",
+            "GridColumns": [
+              "ClassA",
+              "ClassB",
+              "Status",
+              "Title",
+              "StartTime",
+              "CompletionTime",
+              "NumA",
+              "NumB",
+              "ClassC",
+              "Owner"
+            ],
+            "ColumnFilterHash": {
+              "Status": "[\"100\",\"200\",\"300\",\"900\",\"910\"]"
+            },
+            "ColumnSorterHash": {
+              "StartTime": "asc"
+            },
+            "ApiColumnKeyDisplayType": 0,
+            "ApiColumnValueDisplayType": 0,
+            "CalendarTimePeriod": "Monthly",
+            "CalendarFromTo": "StartTime-CompletionTime",
+            "CrosstabGroupByX": "StartTime",
+            "CrosstabGroupByY": "Owner",
+            "CrosstabAggregateType": "Total",
+            "CrosstabValue": "NumA",
+            "CrosstabTimePeriod": "Monthly",
+            "ApiDataType": 0
+          },
+          {
+            "Id": 2,
+            "Name": "一覧",
+            "ColumnFilterHash": {
+              "Status": "[\"100\",\"200\",\"300\",\"910\"]"
+            },
+            "ColumnSorterHash": {
+              "StartTime": "asc"
+            },
+            "ApiColumnKeyDisplayType": 0,
+            "ApiColumnValueDisplayType": 0,
+            "CalendarTimePeriod": "Monthly",
+            "CalendarFromTo": "StartTime-CompletionTime",
+            "CalendarShowStatus": true,
+            "CrosstabGroupByX": "Status",
+            "CrosstabGroupByY": "Owner",
+            "CrosstabAggregateType": "Total",
+            "CrosstabValue": "NumA",
+            "CrosstabTimePeriod": "Monthly",
+            "ApiDataType": 0
+          }
+        ],
+        "Styles": [
+          {
+            "Title": "背景色",
+            "New": true,
+            "Edit": true,
+            "Index": true,
+            "Body": "body {\n    background-color: #808080;\n}\n\n#FieldSetGeneral{\n    background-color: #C0C0C0;\n}\n\n.grid-row{\n    background-color: #C0C0C0;\n}",
+            "Id": 1
+          },
+          {
+            "Title": "「新バージョンとして保存」を非表示にする",
+            "New": true,
+            "Edit": true,
+            "Body": "#VerUp, label[for='VerUp'] {\n    display: none;\n}\n#LinkCreations {\n    display: none;\n}",
+            "Id": 2
+          }
+        ],
+        "Scripts": [
+          {
+            "Title": "編集画面設定用($p.events.on_editor_load)",
+            "New": true,
+            "Edit": true,
+            "Body": "$p.events.on_editor_load = function () {\n    // 常に新バージョンとして保存をオン\n    let verup = $(\"#VerUp\");\n    verup.prop('checked', true);\n};",
+            "Id": 1
+          },
+          {
+            "Title": "内容の差分内容の表示",
+            "New": true,
+            "Edit": true,
+            "Body": "(function () {\n    // テーブルの種類を指定（期限付きテーブルの場合はIssues、記録テーブルの場合はResults）\n    var tableType = 'Issues';\n    // 差分を確認したい項目IDと表示名を指定\n    var targetColumnId = 'Body';\n    var targetColumnName = '内容';\n    // 編集前と編集後の値を格納する変数\n    var value1 = '';\n    var value2 = '';\n    // 外部ライブラリの読み込み（jsdiff／diff2html）\n    var script1 = document.createElement('script');\n    var script2 = document.createElement('script');\n    var script3 = document.createElement('script');\n    var css1 = document.createElement('link');\n    script1.src = 'https://cdnjs.cloudflare.com/ajax/libs/jsdiff/3.4.0/diff.min.js';\n    script2.src = 'https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.3.3/diff2html.min.js';\n    script3.src = 'https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.3.3/diff2html-ui.min.js';\n    css1.setAttribute('rel', 'stylesheet');\n    css1.setAttribute('type', 'text/css');\n    css1.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.3.3/diff2html.min.css');\n    document.body.appendChild(script1);\n    document.body.appendChild(script2);\n    document.body.appendChild(script3);\n    document.body.appendChild(css1);\n    // 編集画面ロード時の値を取得する\n    $p.events.on_editor_load = function () {\n        value1 = $p.getControl(targetColumnId).val();\n    };\n    // 対象項目を変更したタイミングで値を取得して差分を表示する\n    $(document).on('change', '#' + tableType + '_' + targetColumnId, function () {\n        value2 = $p.getControl(targetColumnId).val();\n        diff2html();\n    });\n    // 編集画面の下部に対象項目の編集前後の差分を表示する関数\n    function diff2html() {\n        $('#diff2html').remove();\n        $(\"#Editor\").after('<div id=\"diff2html\" style=\"display:inline-block;\"></div>');\n        $('#diff2html').css(\"width\",\"calc(100% - 250px)\");\n        html = '<div id=\"app\">';\n        $('#diff2html').append(html);\n        unifiedDiff = JsDiff.createPatch(targetColumnName, value1, value2, 'before', 'after');\n        diff2htmlUi = new Diff2HtmlUI({diff: unifiedDiff});\n        diff2htmlUi.draw('#app', {inputFormat: 'json', outputFormat: 'side-by-side', matching: 'lines'});\n    };\n})();",
+            "Id": 2
+          },
+          {
+            "Title": "一覧画面($p.events.on_grid_load)",
+            "Index": true,
+            "Body": "$p.events.on_grid_load = function () {\n    // リンク列にリンクを設定\n    let table = document.getElementById('Grid');\n    let colNum = $p.getGridColumnIndex('ClassB');\n    for (let row of table.rows) {\n        console.log(row.className);\n        if (row.className === 'grid-row') {\n            let urlText = row.cells[colNum].textContent;\n            const a1 = document.createElement(\"a\");\n            a1.href = urlText;\n            a1.target = \"_blank\";\n            a1.innerText = urlText;\n            row.cells[colNum].textContent = \"\";\n            row.cells[colNum].appendChild(a1);\n        }\n    }\n}",
+            "Id": 5
+          }
+        ],
+        "ServerScripts": [
+          {
+            "Title": "完了予定日が開始予定日より過去日だった場合の分単位での制御",
+            "Name": "",
+            "BeforeCreate": true,
+            "BeforeUpdate": true,
+            "Body": "try {\n    let startTime = new Date(model.StartTime);\n    let endTime = new Date(model.CompletionTime);\n    let minutes = Math.floor((endTime- startTime) / (1000 * 60));\n    if (minutes <= 0) {\n        context.Error('完了日が不正です。');\n    }\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 1
+          },
+          {
+            "Title": "開始予定項目と完了予定項目から予定工数を分単位で自動設定",
+            "Name": "",
+            "BeforeCreate": true,
+            "BeforeUpdate": true,
+            "Body": "try {\n    let startTime = new Date(model.StartTime);\n    let endTime = new Date(model.CompletionTime);\n    let minutes = Math.floor((endTime- startTime) / (1000 * 60));\n    model.NumA = minutes;\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 2
+          },
+          {
+            "Title": "開始項目と完了項目から実工数項目に値を設定する",
+            "Name": "",
+            "BeforeCreate": true,
+            "BeforeUpdate": true,
+            "Body": "try {\n    if (model.DateB > 0) {\n    let start = (new Date(model.DateA)) / (1000 * 60);\n    let end = (new Date(model.DateB)) / (1000 * 60);\n    let adjustCosts = model.NumC;\n    model.NumB = end - start + adjustCosts;\n    let expectationCosts = model.NumA;\n    let actualCosts = model.NumB;\n    let differenceCosts = expectationCosts - actualCosts;\n    model.ClassC = differenceCosts;\n    } else {\n        model.NumB = 0;\n    }\n} catch (ex) {\n    context.Log(ex.stack);\n}\n",
+            "TimeOut": 0,
+            "Id": 3
+          },
+          {
+            "Title": "予定工数項目と実工数項目から予実差項目に値を自動で設定する",
+            "Name": "",
+            "BeforeCreate": true,
+            "BeforeUpdate": true,
+            "Body": "try {\n    let expectationCosts = model.NumA;\n    let actualCosts = Math.round(model.NumB, 1);\n    let differenceCosts = expectationCosts - actualCosts;\n    model.ClassC = differenceCosts;\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 4
+          },
+          {
+            "Title": "メインタスク名に親レコードから取得したメインタスク名を設定する",
+            "Name": "",
+            "BeforeCreate": true,
+            "BeforeUpdate": true,
+            "Body": "let recordId = model.ClassA;\nlet siteId = 10928176;\nlet data = {\n    View: {\n        ColumnFilterHash: {\n            IssueId: recordId,\n        }\n    }\n};\nlet results = items.Get(siteId, JSON.stringify(data));\nfor (let result of results) {\n    model.ClassD = result.ClassA;\n}\n",
+            "TimeOut": 0,
+            "Id": 6
+          },
+          {
+            "Title": "新規・編集画面にある標準の削除・コピー・メールボタンを非表示にする",
+            "Name": "",
+            "BeforeOpeningPage": true,
+            "Body": "    elements.DisplayType('DeleteCommand', 3);  // 削除\n    elements.DisplayType('OpenCopyDialogCommand', 3);  // コピー\n    elements.DisplayType('EditOutgoingMail', 3);  // メール",
+            "TimeOut": 0,
+            "Id": 8
+          },
+          {
+            "Title": "一覧画面の一括削除・インポート・エクスポートボタンを非表示にする",
+            "Name": "",
+            "BeforeOpeningPage": true,
+            "Body": "// 一覧画面\nif (context.Action === 'index') {\n    elements.DisplayType('BulkDeleteCommand', 3);  // 一括削除\n    elements.DisplayType('EditImportSettings', 3);  // インポート\n    elements.DisplayType('OpenExportSelectorDialogCommand', 3);  // エクスポート\n}",
+            "TimeOut": 0,
+            "Id": 9
+          }
+        ],
+        "IntegratedSites": [
+          "サブタスク"
+        ],
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    },
+    {
+      "TenantId": 1,
+      "SiteId": 11057724,
+      "Title": "KPTテーブルテンプレート",
+      "SiteName": "",
+      "SiteGroupName": "",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Results",
+      "ParentId": 11057721,
+      "InheritPermission": 11057721,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Results",
+        "GridColumns": [
+          "ResultId",
+          "TitleBody",
+          "DescriptionA",
+          "DescriptionB",
+          "DescriptionC",
+          "ClassA",
+          "ClassB"
+        ],
+        "EditorColumnHash": {
+          "General": [
+            "ClassC",
+            "ClassE",
+            "ClassD",
+            "DescriptionA",
+            "DescriptionB",
+            "DescriptionC",
+            "AttachmentsA",
+            "ClassA",
+            "ClassB"
+          ]
+        },
+        "LinkColumns": [
+          "ClassC",
+          "ClassD",
+          "ClassE",
+          "DescriptionA",
+          "DescriptionB",
+          "DescriptionC"
+        ],
+        "Columns": [
+          {
+            "ColumnName": "Title",
+            "ValidateRequired": false
+          },
+          {
+            "ColumnName": "ClassA",
+            "LabelText": "キーワード",
+            "ExtendedHtmlAfterControl": "<button onclick=\"window.open(`https://www.google.com/search?q=${$p.getControl('ClassA').val()}`,'_blank');\"\nclass=\"button-icon\"\nstyle=\"position:absolute;left:343px;margin-top:2px;\"\ndata-icon=\"ul-icon-search\">\n    検索\n</button>"
+          },
+          {
+            "ColumnName": "ClassB",
+            "LabelText": "参考リンク"
+          },
+          {
+            "ColumnName": "DescriptionA",
+            "LabelText": "K(Keep)",
+            "Description": "できたことや継続することを入力してください。"
+          },
+          {
+            "ColumnName": "DescriptionB",
+            "LabelText": "P(Problem)",
+            "Description": "改善するべき問題点を入力してください。"
+          },
+          {
+            "ColumnName": "DescriptionC",
+            "LabelText": "T(Try)",
+            "Description": "今後挑戦したいことを入力してください。"
+          },
+          {
+            "ColumnName": "ClassC",
+            "LabelText": "タスクID",
+            "ChoicesText": "[[11057722]]",
+            "FieldCss": "field-wide",
+            "Link": true,
+            "SearchType": "PartialMatch"
+          },
+          {
+            "ColumnName": "ClassD",
+            "LabelText": "サブタスク",
+            "ChoicesText": "[\r\n  {\r\n    \"SiteId\": 11057723,\r\n    \"View\": {\r\n      \"ColumnFilterExpressions\": {\r\n        \"ClassA\": \"[@ClassC]\"\r\n      }\r\n    }\r\n  }\r\n]",
+            "MultipleSelections": true
+          },
+          {
+            "ColumnName": "ClassE",
+            "LabelText": "タスク明細ID",
+            "AutoNumberingFormat": "[ClassC][NNNN]",
+            "AutoNumberingResetType": "String",
+            "EditorReadOnly": true
+          }
+        ],
+        "Links": [
+          {
+            "ColumnName": "ClassC",
+            "SiteId": 11057722
+          },
+          {
+            "ColumnName": "ClassD",
+            "SiteId": 11057723,
+            "View": {
+              "Id": 0,
+              "ColumnFilterExpressions": {
+                "ClassA": "[@ClassC]"
+              },
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            },
+            "JsonFormat": true
+          }
+        ],
+        "Processes": [
+          {
+            "Id": 1,
+            "Name": "削除",
+            "DisplayName": "削除",
+            "CurrentStatus": -1,
+            "ChangedStatus": -1,
+            "OnClick": "$p.ex.execDeleteRecord();",
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "ApiDataType": 0
+            }
+          }
+        ],
+        "Styles": [
+          {
+            "Title": "背景色",
+            "New": true,
+            "Edit": true,
+            "Index": true,
+            "Body": "body {\n    background-color: #808080;\n}\n\n#FieldSetGeneral{\n    background-color: #C0C0C0;\n}\n\n.grid-row{\n    background-color: #C0C0C0;\n}",
+            "Id": 1
+          },
+          {
+            "Title": "「新バージョンとして保存」を非表示にする",
+            "New": true,
+            "Edit": true,
+            "Body": "#VerUp, label[for='VerUp'] {\n    display: none;\n}\n#LinkCreations {\n    display: none;\n}",
+            "Id": 2
+          }
+        ],
+        "Scripts": [
+          {
+            "Title": "ボタンクリック時のレコード削除イベント",
+            "Index": true,
+            "Body": "// クライアントスクリプト\ntry {\n    // my-row-buttonがクリックされたときのイベント\n    $(document).on('click', '.my-row-button', function (event) {\n        // レコードのIDをコンソールに出力\n        $p.apiDelete({\n        id: $(this).data('id'),\n        done: function (data) {\n            location.reload();\n        }\n    });\n        // 編集画面が開かないようにイベントの伝搬を停止\n        event.stopImmediatePropagation();\n    });\n} catch (ex) {\n    console.log(ex.stack)\n}",
+            "Id": 2
+          },
+          {
+            "Title": "レコードを削除する",
+            "Edit": true,
+            "Body": "$p.ex.execDeleteRecord = function () {\n    const siteId = 0;\n    try {\n        // レコードのIDをコンソールに出力\n        $p.apiDelete({\n            id: $p.id(),\n            done: function (data) {\n                window.location.href = 'https://pleasanter.net/fs/items/' + siteId + '/index'\n            }\n        });\n    } catch (ex) {\n        console.log(ex.stack)\n    }\n}",
+            "Id": 4
+          },
+          {
+            "Title": "編集画面設定用($p.events.on_editor_load)",
+            "Edit": true,
+            "Body": "$p.events.on_editor_load = function () {\n    // 常に新バージョンとして保存をオン\n    let verup = $(\"#VerUp\");\n    verup.prop('checked', true);\n\n    // リンクボタンの表示\n    $('#Results_ClassBField').after('<button type=\"button\" style=\"display:block;float:left;height:30px;padding:7px 12px;border:solid 1px silver;background-color:white;\" onclick=\"Transition()\">リンク</button>');\n};\nfunction Transition() {\n    open($p.getControl('ClassB').val());\n}",
+            "Id": 5
+          },
+          {
+            "Title": "一覧画面($p.events.on_grid_load)",
+            "Index": true,
+            "Body": "$p.events.on_grid_load = function () {\n    // リンク列にリンクを設定\n    let table = document.getElementById('Grid');\n    let colNum = $p.getGridColumnIndex('ClassB');\n    for (let row of table.rows) {\n        console.log(row.className);\n        if (row.className === 'grid-row') {\n            let urlText = row.cells[colNum].textContent;\n            const a1 = document.createElement(\"a\");\n            a1.href = urlText;\n            a1.target = \"_blank\";\n            a1.innerText = urlText;\n            row.cells[colNum].textContent = \"\";\n            row.cells[colNum].appendChild(a1);\n        }\n    }\n}",
+            "Id": 6
+          }
+        ],
+        "ServerScripts": [
+          {
+            "Title": "一覧画面の行に削除ボタンを配置",
+            "Name": "",
+            "BeforeOpeningRow": true,
+            "Body": "// サーバスクリプト\ntry {\n    // 「data-id=\"${model.ResultId}\"」でボタンを表示する行を指定\n    let html = `<button data-id=\"${model.ResultId}\"class=\"button-icon my-row-button\"data-icon=\"ui-icon-circle-triangle-e\">削除</button>`;\n    // 該当業のClassA列に「削除」ボタンを表示\n    columns.ClassA.RawText = html;\n} catch (ex) {\n    context.Log(ex.stack);\n}",
+            "TimeOut": 0,
+            "Id": 1
+          },
+          {
+            "Title": "新規・編集画面にある標準の削除・コピー・メールボタンを非表示にする",
+            "Name": "",
+            "BeforeOpeningPage": true,
+            "Body": "    elements.DisplayType('DeleteCommand', 3);  // 削除\n    elements.DisplayType('OpenCopyDialogCommand', 3);  // コピー\n    elements.DisplayType('EditOutgoingMail', 3);  // メール",
+            "TimeOut": 0,
+            "Id": 2
+          },
+          {
+            "Title": "一覧画面の一括削除・インポート・エクスポートボタンを非表示にする",
+            "Name": "",
+            "BeforeOpeningPage": true,
+            "Body": "// 一覧画面\nif (context.Action === 'index') {\n    elements.DisplayType('BulkDeleteCommand', 3);  // 一括削除\n    elements.DisplayType('EditImportSettings', 3);  // インポート\n    elements.DisplayType('OpenExportSelectorDialogCommand', 3);  // エクスポート\n}",
+            "TimeOut": 0,
+            "Id": 3
+          }
+        ],
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    }
+  ],
+  "Data": [],
+  "Permissions": [
+    {
+      "SiteId": 11057715,
+      "Permissions": [
+        {
+          "ReferenceId": 11057715,
+          "DeptId": 0,
+          "GroupId": 0,
+          "UserId": 12454,
+          "PermissionType": 511
+        },
+        {
+          "ReferenceId": 11057716,
+          "DeptId": 0,
+          "GroupId": 0,
+          "UserId": 12454,
+          "PermissionType": 511
+        },
+        {
+          "ReferenceId": 11057721,
+          "DeptId": 0,
+          "GroupId": 0,
+          "UserId": 12454,
+          "PermissionType": 511
+        }
+      ]
+    },
+    {
+      "SiteId": 11057716,
+      "Permissions": [
+        {
+          "ReferenceId": 11057716,
+          "DeptId": 0,
+          "GroupId": 0,
+          "UserId": 12454,
+          "PermissionType": 511
+        }
+      ]
+    },
+    {
+      "SiteId": 11057717,
+      "Permissions": []
+    },
+    {
+      "SiteId": 11057718,
+      "Permissions": []
+    },
+    {
+      "SiteId": 11057719,
+      "Permissions": []
+    },
+    {
+      "SiteId": 11057720,
+      "Permissions": []
+    },
+    {
+      "SiteId": 11057721,
+      "Permissions": [
+        {
+          "ReferenceId": 11057721,
+          "DeptId": 0,
+          "GroupId": 0,
+          "UserId": 12454,
+          "PermissionType": 511
+        }
+      ]
+    },
+    {
+      "SiteId": 11057722,
+      "Permissions": []
+    },
+    {
+      "SiteId": 11057723,
+      "Permissions": []
+    },
+    {
+      "SiteId": 11057724,
+      "Permissions": []
+    }
+  ],
+  "PermissionIdList": {
+    "DeptIdList": [],
+    "GroupIdList": [],
+    "UserIdList": [
+      {
+        "UserId": 12454,
+        "LoginId": "5886e885-28a5-4db9-a67f-9f0756d42019"
+      }
+    ]
+  }
+}
