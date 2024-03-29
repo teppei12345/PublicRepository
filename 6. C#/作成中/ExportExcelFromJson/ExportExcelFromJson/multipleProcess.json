@@ -1,0 +1,101 @@
+﻿{
+  "HeaderInfo": {
+    "AssemblyVersion": "1.4.1.1",
+    "BaseSiteId": 11469811,
+    "Server": "https://pleasanter.net/fs",
+    "CreatorName": "浦田 哲平",
+    "PackageTime": "2024-03-29T11:03:47.7792272+00:00",
+    "Convertors": [
+      {
+        "SiteId": 11469811,
+        "SiteTitle": "複数プロセス",
+        "ReferenceType": "Results",
+        "IncludeData": false
+      }
+    ],
+    "IncludeSitePermission": true,
+    "IncludeRecordPermission": true,
+    "IncludeColumnPermission": true,
+    "IncludeNotifications": true,
+    "IncludeReminders": true
+  },
+  "Sites": [
+    {
+      "TenantId": 1,
+      "SiteId": 11469811,
+      "Title": "複数プロセス",
+      "SiteName": "",
+      "SiteGroupName": "",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "AnalyGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Results",
+      "ParentId": 11469552,
+      "InheritPermission": 10453386,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Results",
+        "Columns": [
+          {
+            "ColumnName": "Status",
+            "ChoicesText": "100,未着手,未,status-new\n150,準備,準,status-preparation\n300,レビュー,レ,status-review\n900,完了,完,status-closed\n910,保留,留,status-rejected"
+          }
+        ],
+        "Processes": [
+          {
+            "Id": 1,
+            "Name": "SampleProcess1",
+            "DisplayName": "SampleProcess1",
+            "CurrentStatus": 0,
+            "ChangedStatus": 150,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "CalendarSiteId": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 2,
+            "Name": "SampleProcess2",
+            "DisplayName": "SampleProcess2",
+            "CurrentStatus": 150,
+            "ChangedStatus": -1,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "CalendarSiteId": 0,
+              "ApiDataType": 0
+            }
+          }
+        ],
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    }
+  ],
+  "Data": [],
+  "Permissions": [
+    {
+      "SiteId": 11469811,
+      "Permissions": []
+    }
+  ],
+  "PermissionIdList": {
+    "DeptIdList": [],
+    "GroupIdList": [],
+    "UserIdList": []
+  }
+}
