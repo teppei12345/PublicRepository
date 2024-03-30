@@ -37,10 +37,14 @@ namespace ExportExcelFromJson
                     var choicesTextArray = choicesText.Split("\n");
                         statusCollection["0"] = "未設定";
                         statusCollection["-1"] = "全て";
+                        int i = 1;
                         foreach (var choiceText in choicesTextArray)
                         {
                             var choiceTextArray = choiceText.Split(",");
                             statusCollection[choiceTextArray[0]] = choiceTextArray[1];
+                            var model = new Model();
+                            model.Manipulate(outputFile, choiceTextArray[1], i, (i+1));
+                            i++;
                         }
                     }
                 }
@@ -69,6 +73,8 @@ namespace ExportExcelFromJson
                                 if (status.Key == (string)process["CurrentStatus"]) 
                                 {
                                     Console.WriteLine("現在の状況:" + status.Value);
+                                    Console.WriteLine("Excelアクセス処理：開始");
+                                    
                                     break;
                                 }
                             }
