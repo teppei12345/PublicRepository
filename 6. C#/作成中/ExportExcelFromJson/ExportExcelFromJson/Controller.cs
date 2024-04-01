@@ -15,9 +15,11 @@ namespace ExportExcelFromJson
             JObject jsonObject;
             int columnCount = 1;
             Dictionary<string, string> statusCollection = new Dictionary<string, string>();
-            string logFile = "C:\\Implem\\個人フォルダ_PublicRepository\\PublicRepository\\6. C#\\作成中\\ExportExcelFromJson\\ExportExcelFromJson\\bin\\Debug\\net8.0\\logs\\log.log";
+            DateTime dt = DateTime.Now;
+            string now = dt.ToString("yyyyMMddHHmmss");
+            string logFile = "C:\\Implem\\個人フォルダ_PublicRepository\\PublicRepository\\6. C#\\作成中\\ExportExcelFromJson\\ExportExcelFromJson\\bin\\Debug\\net8.0\\logs\\" + now + "_log.log";
             string inputFile = "C:\\Implem\\個人フォルダ_PublicRepository\\PublicRepository\\6. C#\\作成中\\ExportExcelFromJson\\ExportExcelFromJson\\bin\\Debug\\net8.0\\json\\multipleProcess.json";
-            string outputFile = "C:\\Implem\\個人フォルダ_PublicRepository\\PublicRepository\\6. C#\\作成中\\ExportExcelFromJson\\ExportExcelFromJson\\bin\\Debug\\net8.0\\excel\\sitesettings.xlsx";
+            string outputFile = "C:\\Implem\\個人フォルダ_PublicRepository\\PublicRepository\\6. C#\\作成中\\ExportExcelFromJson\\ExportExcelFromJson\\bin\\Debug\\net8.0\\excel\\" + now + "_sitesettings.xlsx";
             try
             {
                 modelWriteToLogFile.WriteToLogFile(logFile, "ExportExcelFromJson：開始", logType["INFO"]);
