@@ -61,9 +61,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Implem\\個人フォルダ_PublicRepository\\PublicRepository\\6. C#\\作成中\\ExportExcelFromJson\\ExportExcelFromJson\\ExportExcelFromJson.csproj",
-      "projectName": "ExportExcelFromJson",
-      "projectPath": "C:\\Implem\\個人フォルダ_PublicRepository\\PublicRepository\\6. C#\\作成中\\ExportExcelFromJson\\ExportExcelFromJson\\ExportExcelFromJson.csproj",
+      "projectUniqueName": "C:\\Implem\\個人フォルダ_PublicRepository\\PublicRepository\\6. C#\\作成中\\ExportExcelFromJson\\ExportExcelFromJson\\ExportExcelFromJson_ProcessSettings.csproj",
+      "projectName": "ExportExcelFromJson_ProcessSettings",
+      "projectPath": "C:\\Implem\\個人フォルダ_PublicRepository\\PublicRepository\\6. C#\\作成中\\ExportExcelFromJson\\ExportExcelFromJson\\ExportExcelFromJson_ProcessSettings.csproj",
       "packagesPath": "C:\\Users\\浦田哲平\\.nuget\\packages\\",
       "outputPath": "C:\\Implem\\個人フォルダ_PublicRepository\\PublicRepository\\6. C#\\作成中\\ExportExcelFromJson\\ExportExcelFromJson\\obj\\",
       "projectStyle": "PackageReference",

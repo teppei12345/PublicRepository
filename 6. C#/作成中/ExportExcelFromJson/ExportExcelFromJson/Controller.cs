@@ -19,7 +19,7 @@ namespace ExportExcelFromJson
             string now = dt.ToString("yyyyMMddHHmmss");
             string logFile = "C:\\Implem\\個人フォルダ_PublicRepository\\PublicRepository\\6. C#\\作成中\\ExportExcelFromJson\\ExportExcelFromJson\\bin\\Debug\\net8.0\\logs\\" + now + "_log.log";
             string inputFile = "C:\\Implem\\個人フォルダ_PublicRepository\\PublicRepository\\6. C#\\作成中\\ExportExcelFromJson\\ExportExcelFromJson\\bin\\Debug\\net8.0\\json\\multipleProcess.json";
-            string outputFile = "C:\\Implem\\個人フォルダ_PublicRepository\\PublicRepository\\6. C#\\作成中\\ExportExcelFromJson\\ExportExcelFromJson\\bin\\Debug\\net8.0\\excel\\" + now + "_sitesettings.xlsx";
+            string outputFile = "C:\\Implem\\個人フォルダ_PublicRepository\\PublicRepository\\6. C#\\作成中\\ExportExcelFromJson\\ExportExcelFromJson\\bin\\Debug\\net8.0\\excel\\" + now + "_processsettings.xlsx";
             try
             {
                 modelWriteToLogFile.WriteToLogFile(logFile, "ExportExcelFromJson：開始", logType["INFO"]);
