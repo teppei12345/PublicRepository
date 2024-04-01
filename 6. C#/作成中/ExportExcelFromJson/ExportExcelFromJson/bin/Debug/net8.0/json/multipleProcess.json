@@ -4,7 +4,7 @@
     "BaseSiteId": 11469811,
     "Server": "https://pleasanter.net/fs",
     "CreatorName": "浦田 哲平",
-    "PackageTime": "2024-03-29T11:03:47.7792272+00:00",
+    "PackageTime": "2024-04-01T02:37:53.197351+00:00",
     "Convertors": [
       {
         "SiteId": 11469811,
@@ -54,7 +54,7 @@
             "Id": 1,
             "Name": "SampleProcess1",
             "DisplayName": "SampleProcess1",
-            "CurrentStatus": 0,
+            "CurrentStatus": 100,
             "ChangedStatus": 150,
             "View": {
               "Id": 0,
@@ -69,7 +69,21 @@
             "Name": "SampleProcess2",
             "DisplayName": "SampleProcess2",
             "CurrentStatus": 150,
-            "ChangedStatus": -1,
+            "ChangedStatus": 300,
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "CalendarSiteId": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 3,
+            "Name": "SampleProcess3",
+            "DisplayName": "SampleProcess3",
+            "CurrentStatus": 300,
+            "ChangedStatus": 900,
             "View": {
               "Id": 0,
               "ApiColumnKeyDisplayType": 0,

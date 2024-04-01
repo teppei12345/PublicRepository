@@ -11,7 +11,6 @@ namespace ExportExcelFromJson
         public void ManipulateExcel(string ExportFile, string text, int line, int column, string logFile, string logType)
         {
             WriteToLogFile(logFile, "Excelアクセス処理：開始", logType);
-            WriteToLogFile(logFile, "Cells[" + line + ", " + column + "] = " + text, logType);
             Excel.Application excelApp = new Excel.Application(); ;
             Excel.Workbooks excelBooks = excelApp.Workbooks; ;
             Excel.Workbook excelBook = null;
@@ -39,6 +38,8 @@ namespace ExportExcelFromJson
                     sheet = sheets[1];
                     sheet.Cells[line, column] = text;
                     excelBook.Save();
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(sheets);
+                    WriteToLogFile(logFile, ExportFile, logType);
                 }
             }
             catch (Exception e)
@@ -49,10 +50,12 @@ namespace ExportExcelFromJson
             finally
             {
                 WriteToLogFile(logFile, "Excel操作処理：終了", logType);
-                excelApp.Quit();
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(sheet);
+                excelBook.Close();
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(excelBook);
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(excelBooks);
+                excelApp.DisplayAlerts = true;
+                excelApp.Quit();
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
                 WriteToLogFile(logFile, "Excelアクセス処理：終了", logType);
             }
