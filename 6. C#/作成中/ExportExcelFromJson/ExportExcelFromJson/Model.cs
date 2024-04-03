@@ -2,13 +2,14 @@
 using System;
 using io = System.IO;
 using System.Text;
+using Microsoft.Office.Interop.Excel;
 
 
 namespace ExportExcelFromJson
 {
     internal class Model
     {
-        public void ManipulateExcel(string ExportFile, string text, int line, int column, string logFile, string logType)
+        public void ManipulateExcel(string ExportFile, string[,] text, string logFile, string logType)
         {
             WriteToLogFile(logFile, "Excelアクセス処理：開始", logType);
             Excel.Application excelApp = new Excel.Application(); ;
@@ -26,7 +27,13 @@ namespace ExportExcelFromJson
                     WriteToLogFile(logFile, "既存ブックが存在しない場合", logType);
                     excelBook = excelBooks.Add();
                     sheet = (Excel.Worksheet)excelApp.Worksheets["sheet1"];
-                    sheet.Cells[line, column] = text;
+                    for (var line = 0; line < text.GetLength(0); line++)
+                    {
+                        for (var column = 0; column < text.GetLength(1); column++)
+                        {
+                            sheet.Cells[line + 1, column + 1] = text[line, column];
+                        }
+                    }
                     excelBook.SaveAs(ExportFile);
                     WriteToLogFile(logFile, ExportFile, logType);
                 }
@@ -36,7 +43,13 @@ namespace ExportExcelFromJson
                     excelBook = excelBooks.Open(Path.GetFullPath(ExportFile));
                     sheets = excelBook.Worksheets;
                     sheet = sheets[1];
-                    sheet.Cells[line, column] = text;
+                    for (var line = 0; line < text.GetLength(0); line++)
+                    {
+                        for (var column = 0; column < text.GetLength(1); column++)
+                        {
+                            sheet.Cells[line + 1, column + 1] = text[line, column];
+                        }
+                    }
                     excelBook.Save();
                     System.Runtime.InteropServices.Marshal.ReleaseComObject(sheets);
                     WriteToLogFile(logFile, ExportFile, logType);
