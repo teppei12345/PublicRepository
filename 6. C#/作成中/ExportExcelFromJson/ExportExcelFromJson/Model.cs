@@ -3,66 +3,118 @@ using System;
 using io = System.IO;
 using System.Text;
 using Microsoft.Office.Interop.Excel;
-
+using Microsoft.VisualBasic;
+using Newtonsoft.Json.Linq;
+using System.Reflection;
+using System.Text.Json.Nodes;
+using Microsoft.Office.Interop.Excel;
+using Newtonsoft.Json.Linq;
+using System.Data.Common;
+using System.Linq;
+using System.Text.Json.Nodes;
+using Newtonsoft.Json;
 
 namespace ExportExcelFromJson
 {
     internal class Model
     {
-        public void ManipulateExcel(string ExportFile, string[,] text, string logFile, string logType)
+        Dictionary<string, string> logType = new Dictionary<string, string> { { "INFO", "INFO " }, { "ERROR", "ERROR" }, { "DEBUG", "DEBUG" } };
+        string jsonString;
+        string inputFile = ".\\json\\multipleProcess.json";
+        JObject jsonObject;
+        JToken sites;
+        JObject siteSettings;
+        JToken Columns;
+        string[] sitesettings;
+        Dictionary<string, JToken> columnInfoDictionaly = new Dictionary<string, JToken>();
+        public bool setJson (string logFile)
         {
-            WriteToLogFile(logFile, "Excelアクセス処理：開始", logType);
-            Excel.Application excelApp = new Excel.Application(); ;
-            Excel.Workbooks excelBooks = excelApp.Workbooks; ;
-            Excel.Workbook excelBook = null;
-            Excel.Sheets sheets = null;
-            Excel.Worksheet sheet = null;
+            WriteToLogFile(logFile, "jsonファイルの読み取り：開始");
+            WriteToLogFile(logFile, "jsonファイルパス：" + inputFile);
+            jsonString = File.ReadAllText(inputFile);
+            WriteToLogFile(logFile, "jsonファイルの読み取り：終了");
+            WriteToLogFile(logFile, "jsonオブジェクトの生成処理：開始");
+            jsonObject = JObject.Parse(jsonString);
+            WriteToLogFile(logFile, "jsonオブジェクトの生成処理：終了");
+            WriteToLogFile(logFile, "サイト設定取得処理：開始");
+            sites = jsonObject["Sites"];
+            if (sites == null)
+            {
+                WriteToLogFile(logFile, "サイトが存在しないため関数処理の中断");
+                return false;
+            } else
+            {
+                return true;
+            }
+        }
+        public bool setSiteSettings (string logFile)
+        {
+            siteSettings = (JObject)sites[0]["SiteSettings"];
+            if (siteSettings == null)
+            {
+                WriteToLogFile(logFile, "サイト設定が存在しないため関数処理の中断");
+                return false;
+            } else
+            {
+                return true;
+            }
+        }
+        public void ManipulateExcel(string ExportFile, string logFile)
+        {
+            WriteToLogFile(logFile, "Excelアクセス処理：開始");
+            Application excelApp = new Application(); ;
+            Workbooks excelBooks = excelApp.Workbooks; ;
+            Workbook excelBook = null;
+            Sheets sheets = null;
+            Worksheet sheet = null;
             excelApp.Visible = false;
             excelApp.DisplayAlerts = false;
             try
             {
-                WriteToLogFile(logFile, "Excel操作処理：開始", logType);
+                WriteToLogFile(logFile, "Excel操作処理：開始");
                 if (!File.Exists(ExportFile))
                 {
-                    WriteToLogFile(logFile, "既存ブックが存在しない場合", logType);
+                    WriteToLogFile(logFile, "既存ブックが存在しない場合");
                     excelBook = excelBooks.Add();
-                    sheet = (Excel.Worksheet)excelApp.Worksheets["sheet1"];
-                    for (var line = 0; line < text.GetLength(0); line++)
-                    {
-                        for (var column = 0; column < text.GetLength(1); column++)
+                    foreach (var sitesetting in siteSettings)
                         {
-                            sheet.Cells[line + 1, column + 1] = text[line, column];
+                        if (sitesetting.Value is JArray)
+                        {
+                            columnInfoDictionaly[sitesetting.Key] = sitesetting.Value;
                         }
                     }
-                    excelBook.SaveAs(ExportFile);
-                    WriteToLogFile(logFile, ExportFile, logType);
+                    foreach (var columnInfo in columnInfoDictionaly.Select((Entry, Index) => new { Entry, Index }))
+                    {
+                        // todo
+                        // sheet.Cells[line + 1, column + 1] = text[line, column];
+                    }
+                    string path =  Path.GetFullPath(ExportFile);
+                    excelBook.SaveAs(path);
+                    WriteToLogFile(logFile, ExportFile);
                 }
                 else
                 {
-                    WriteToLogFile(logFile, "既存ブックが存在する場合", logType);
+                    WriteToLogFile(logFile, "既存ブックが存在する場合");
                     excelBook = excelBooks.Open(Path.GetFullPath(ExportFile));
                     sheets = excelBook.Worksheets;
                     sheet = sheets[1];
-                    for (var line = 0; line < text.GetLength(0); line++)
+                    foreach (var sitesetting in siteSettings)
                     {
-                        for (var column = 0; column < text.GetLength(1); column++)
-                        {
-                            sheet.Cells[line + 1, column + 1] = text[line, column];
-                        }
+                        Console.WriteLine(sitesetting);
                     }
                     excelBook.Save();
                     System.Runtime.InteropServices.Marshal.ReleaseComObject(sheets);
-                    WriteToLogFile(logFile, ExportFile, logType);
+                    WriteToLogFile(logFile, ExportFile);
                 }
             }
             catch (Exception e)
             {
-                WriteToLogFile(logFile, "例外が発生しました。", "ERROR");
+                WriteToLogFile(logFile, "例外が発生しました。", logType["ERROR"]);
                 Console.WriteLine(e);
             }
             finally
             {
-                WriteToLogFile(logFile, "Excel操作処理：終了", logType);
+                WriteToLogFile(logFile, "Excel操作処理：終了");
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(sheet);
                 excelBook.Close();
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(excelBook);
@@ -70,11 +122,11 @@ namespace ExportExcelFromJson
                 excelApp.DisplayAlerts = true;
                 excelApp.Quit();
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
-                WriteToLogFile(logFile, "Excelアクセス処理：終了", logType);
+                WriteToLogFile(logFile, "Excelアクセス処理：終了");
             }
         }
 
-        public void WriteToLogFile(string File, string text, string logType)
+        public void WriteToLogFile(string File, string text, string logType = "DEBUG")
         {
             string message = logType + "【" + DateTime.Now + "】" + text;
             Encoding enc = Encoding.GetEncoding("utf-8");
