@@ -26,7 +26,8 @@ namespace ExportExcelFromJson
         JObject siteSettings;
         JToken Columns;
         string[] sitesettings;
-        Dictionary<string, JToken> columnInfoDictionaly = new Dictionary<string, JToken>();
+        Dictionary<string, JArray> columnInfoDictionaly = new Dictionary<string, JArray>();
+        string[] siteSettingsKeys = { "Columns", "Processes" };
         public bool setJson (string logFile)
         {
             WriteToLogFile(logFile, "jsonファイルの読み取り：開始");
@@ -80,13 +81,19 @@ namespace ExportExcelFromJson
                         {
                         if (sitesetting.Value is JArray)
                         {
-                            columnInfoDictionaly[sitesetting.Key] = sitesetting.Value;
+                            columnInfoDictionaly[sitesetting.Key] = (JArray)sitesetting.Value;
                         }
                     }
-                    foreach (var columnInfo in columnInfoDictionaly.Select((Entry, Index) => new { Entry, Index }))
+                    foreach (var siteSettingsKey in siteSettingsKeys)
                     {
-                        // todo
-                        // sheet.Cells[line + 1, column + 1] = text[line, column];
+                        Console.WriteLine("siteSettingsKey：" + siteSettingsKey);
+                        Console.WriteLine(columnInfoDictionaly[siteSettingsKey]);
+                        Console.WriteLine(columnInfoDictionaly[siteSettingsKey].GetType());
+                        foreach (JArray siteSettingsValue in columnInfoDictionaly.Values)
+                        {
+                            Console.WriteLine(siteSettingsValue.GetType());
+                            Console.WriteLine(siteSettingsValue[0]);            
+                        }
                     }
                     string path =  Path.GetFullPath(ExportFile);
                     excelBook.SaveAs(path);
