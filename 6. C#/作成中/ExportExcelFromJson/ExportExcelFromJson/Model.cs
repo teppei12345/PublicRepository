@@ -28,7 +28,9 @@ namespace ExportExcelFromJson
         string[] sitesettings;
         Dictionary<string, JArray> columnInfoDictionaly = new Dictionary<string, JArray>();
         string[] siteSettingsKeys = { "Columns", "Processes" };
-        public bool setJson (string logFile)
+        int line = 1;
+        int column = 1;
+        public bool setJson(string logFile)
         {
             WriteToLogFile(logFile, "jsonファイルの読み取り：開始");
             WriteToLogFile(logFile, "jsonファイルパス：" + inputFile);
@@ -43,19 +45,21 @@ namespace ExportExcelFromJson
             {
                 WriteToLogFile(logFile, "サイトが存在しないため関数処理の中断");
                 return false;
-            } else
+            }
+            else
             {
                 return true;
             }
         }
-        public bool setSiteSettings (string logFile)
+        public bool setSiteSettings(string logFile)
         {
             siteSettings = (JObject)sites[0]["SiteSettings"];
             if (siteSettings == null)
             {
                 WriteToLogFile(logFile, "サイト設定が存在しないため関数処理の中断");
                 return false;
-            } else
+            }
+            else
             {
                 return true;
             }
@@ -76,9 +80,10 @@ namespace ExportExcelFromJson
                 if (!File.Exists(ExportFile))
                 {
                     WriteToLogFile(logFile, "既存ブックが存在しない場合");
+                    excelApp.SheetsInNewWorkbook = siteSettingsKeys.Length;
                     excelBook = excelBooks.Add();
                     foreach (var sitesetting in siteSettings)
-                        {
+                    {
                         if (sitesetting.Value is JArray)
                         {
                             columnInfoDictionaly[sitesetting.Key] = (JArray)sitesetting.Value;
@@ -86,16 +91,27 @@ namespace ExportExcelFromJson
                     }
                     foreach (var siteSettingsKey in siteSettingsKeys)
                     {
-                        Console.WriteLine("siteSettingsKey：" + siteSettingsKey);
-                        Console.WriteLine(columnInfoDictionaly[siteSettingsKey]);
-                        Console.WriteLine(columnInfoDictionaly[siteSettingsKey].GetType());
-                        foreach (JArray siteSettingsValue in columnInfoDictionaly.Values)
+                        Console.WriteLine(siteSettingsKey.GetType());
+                        foreach (var siteSetting in columnInfoDictionaly)
                         {
-                            Console.WriteLine(siteSettingsValue.GetType());
-                            Console.WriteLine(siteSettingsValue[0]);            
+                            if (siteSettingsKey == siteSetting.Key)
+                            {
+                                Console.WriteLine(siteSettingsKey + "：" + siteSetting.Key);
+                                sheet = (Worksheet)excelApp.Worksheets["" + siteSettingsKey];
+                                foreach (JObject siteSettingsValues in columnInfoDictionaly[siteSettingsKey])
+                                {
+                                    foreach (var value in siteSettingsValues)
+                                    {
+                                        sheet.Cells[line, column] = value.Key;
+                                        sheet.Cells[line, (column + 1)] = value.Value;
+                                        line++;
+                                        column++;
+                                    }
+                                }
+                            }
                         }
                     }
-                    string path =  Path.GetFullPath(ExportFile);
+                    string path = Path.GetFullPath(ExportFile);
                     excelBook.SaveAs(path);
                     WriteToLogFile(logFile, ExportFile);
                 }
