@@ -12,7 +12,7 @@
 
 ### 対象者
 
-* Docker を利用した Pleasanter にてバージョンアッ等によるパラメータ設定の引継ぎ方法に悩まれている方  
+* Docker を利用した Pleasanter にてバージョンアップ等によるパラメータ設定の引継ぎ方法に悩まれている方  
 * Docker を利用した PostgreSQL にて蓄積したデータを永続化したい方  
 * 上記どちらも実現されたい方  
 * Docker を利用した Pleasanter * PostgreSQL の環境構築を目指されている方  
@@ -32,7 +32,7 @@
 |:----|:----|
 |Pleasanter|1.3.6.0|
 |PostgreSQL|15|
-|pgadmin4|8.6|
+|pgadmin4|8.9|
 
 ## 手順
 
@@ -41,8 +41,9 @@
 1. 同階層に配置されている「PleasanterModule.zip」をダウンロード  
 2. 「PleasanterModule.zip」を任意のディレクトリに解凍  
     **※ 解凍するディレクトリに指定はありません**  
-3. 「PleasanterModule」ディレクト上でコマンドプロンプトを起動  
-4. 下記の順番の通り、コマンドを実行  
+3. 「PleasanterModule」ディレクト上にライセンスファイルを配置  
+4. 「PleasanterModule」ディレクト上でコマンドプロンプトを起動  
+5. 下記の順番の通り、コマンドを実行  
 
 #### 1. Implem.PleasanterとImplem.Codedefinerのイメージプル
 
