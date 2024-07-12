@@ -1,130 +1,130 @@
-# Docker Compose を利用した Pleasanter * PostgreSQL 環境構築用モジュール
+# Module used Docker Compose for building Pleasanter * PostgreSQL environment
 
-## 概要
+## overview
 
-本モジュールでは、Docker 環境下で Pleasanter * PostgreSQL の運用ができます。  
-各ツール・サービスについては下記をご参照ください。  
+This module allows you to operate Pleasanter * PostgreSQL in a Docker environment.  
+Please see below for each tool and service.  
 
 * [Pleasanter](https://pleasanter.org/purpose)  
 * [PostgreSQL](https://www.postgresql.jp/document/)  
 * [Docker](https://www.docker.com/)  
 * [Docker Compose](https://github.com/docker/compose)  
 
-### 対象者
+### Target audience
 
-* Docker を利用した Pleasanter にてバージョンアップ等によるパラメータ設定の引継ぎ方法に悩まれている方  
-* Docker を利用した PostgreSQL にて蓄積したデータを永続化したい方  
-* 上記どちらも実現されたい方  
-* Docker を利用した Pleasanter * PostgreSQL の環境構築を目指されている方  
-* Pleasanterを快適に利用されたい方  
+* Those who are worried about how to inherit parameter settings due to version upgrade etc. of Pleasanter using Docker
+* Those who want to persist data accumulated with PostgreSQL using Docker
+* Those who want to achieve both of the above
+* Those who want to use Docker Compose for building Pleasanter * PostgreSQL environment
+* Those who want to use Pleasanter comfortably
 
-### できること
+### What you can do
 
-* 3つのコマンドで Pleasanter の利用ができます  
-* Pleasanter のパラメータ設定を引き継ぐことができます  
-* PostgreSQL に蓄積したデータを永続化できます  
+* You can use Pleasanter with 3 commands  
+* You can inherit Pleasanter parameter settings
+* You can persist accumulated PostgreSQL data
 
-### 内容
+### content
 
-本モジュールには、下記ツールの下記バージョンが含まれます。  
+This module includes the following versions  
 
-|ツール|バージョン|
+|Tools|Versions|
 |:----|:----|
 |Pleasanter|1.3.6.0|
 |PostgreSQL|15|
 |pgadmin4|8.9|
 
-## 手順
+## procedure
 
-### 導入
+### introduction
 
-1. 同階層に配置されている「PleasanterModule.zip」をダウンロード  
-2. 「PleasanterModule.zip」を任意のディレクトリに解凍  
-    **※ 解凍するディレクトリに指定はありません**  
-3. 「PleasanterModule」ディレクト上にライセンスファイルを配置  
-4. 「PleasanterModule」ディレクト上でコマンドプロンプトを起動  
-5. 下記の順番の通り、コマンドを実行  
+1. Download "PleasanterModule.zip" located at the same level
+2. Unzip "PleasanterModule.zip" to any directory
+    **※ There is no specification for the directory to unzip**  
+3. Place the license file on the "PleasanterModule" directory
+4. Start the command prompt on the "PleasanterModule" directory
+5. Execute the commands in the following order
 
-#### 1. イメージプル
+#### 1. Image pull
 
 ```CMD
 docker compose build
 ```
 
-#### 2. PostgreSQLコンテナ実行とCodedefinerの実行
+#### 2. Run PostgreSQL container and Codedefiner
 
 ```CMD
 docker compose run --rm codedefiner _rds
 ```
 
-#### 3. Pleasanterコンテナ実行
+#### 3. Run Pleasanter container
 
 ```CMD
 docker compose up -d pleasanter
 ```
 
-#### 4. pgadmin4のイメージプル・コンテナ実行
+#### 4. Image pull and run pgadmin4 container
 
-PostgreSQLを参照するためのGUIツール「pgadmin4」をご利用の方はこちらのコマンドも実行してください。  
+If you want to use the GUI tool "pgadmin4" for viewing PostgreSQL, please execute this command.  
 
 ```CMD
 docker compose up -d pgadmin4
 ```
 
-### 起動・動作確認
+### Startup/operation check
 
-上記コマンドで各ツールが起動しているかどうか確認してください。  
+Please check each tool is starting.  
 
-#### Pleasanter(localhost:50001)にアクセス
+#### Access Pleasanter(localhost:50001)
 
-[localhost:50001](http://localhost:50001/)にアクセスし、Pleasanter のログイン画面にアクセスできるか確認してください。  
+Please access [localhost:50001](http://localhost:50001/) and check you can access the Pleasanter login screen.  
 
-#### Pleasanterでテーブルを作成
+#### Create a table with Pleasanter
 
-下記の手順で記録テーブルを作成し、一覧画面に遷移することを確認してください。  
+Please follow the steps below to create "a record table" and check it moves to "the list screen".  
 
-##### 初期ログインからテーブル作成の手順
+##### Steps to create a table from first login
 
-1. 下記「Pleasanterログイン情報」の通り入力後、「ログイン」をクリック  
-2. 表示されたダイアログ上で任意のパスワードを入力し、「変更」をクリック  
-    **※ 以降のログイン情報となるため、厳重に管理してください**  
-3. 画面左上の「+」をクリック  
-4. 遷移後の画面左から「記録テーブル」を選択後、「作成」をクリック  
-5. 任意の名前を入力後、「作成」をクリック  
-6. 作成されたテーブルをクリックし、一覧画面に遷移することを確認  
+1. Entering the "Pleasanter login information" below, then click "Login"
+2. Enter any password in the dialog that appears and click "Change"
+    **※Please manage this carefully as it will be your login information from now on**  
+3. Click "+" at the top left of the screen
+4. Select "Recording Table" from the left side of the screen after transition, then click "Create"
+5. Entering any name, then click "Create"
+6. Click on the created table and confirm that it will move to "the list screen".
 
-**Pleasanterログイン情報**  
+**Pleasanter login information**  
 
-|パラメータ|値|
+|parameter|value|
 |:----|:----|
-|ログインID|Administrator|
-|パスワード|pleasanter|
+|Login ID|Administrator|
+|Password|pleasanter|
 
-#### pgadmin4(localhost:12345)にアクセス
+#### Access pgadmin4(localhost:12345)
 
-[localhost:12345](http://localhost:12345/)にアクセスし、pgadmin4 のログイン画面にアクセスできるか確認してください。  
+Please access [localhost:12345](http://localhost:12345/) and check you can access the admin4 login screen.  
 
-#### pgadmin4でデータを確認
+#### Check the data with pgadmin4
 
-1. 下記「pgadmin4ログイン情報」の通り入力後、「Login」をクリック  
-2. 「Servers」を右クリックし、「登録 > サーバ..」をクリック  
-3. 下記「サーバ登録情報」の通り入力後、「適用」をクリック  
-4. 「Servers > db > データベース > Implem.Pleasanter > スキーマ > Implem.Pleasanter > テーブル > Items」テーブルを右クリック  
-5. 「データを閲覧/編集 > 最後の100行」をクリック  
-6. 先ほど作成したテーブルのデータ(ReferenceId：1)の存在を確認  
+1. Entering the "pgadmin4 login information" below, then click "Login".
+2. Right-click "Servers" and click "Register > Server..."
+3. Entering the "Server registration information" below, then click "Apply".
+4. Right-click the "Servers > db > Database > Implem.Pleasanter > Schema > Implem.Pleasanter > Tables > Items" table.
+5. Click "View/Edit Data > Last 100 Rows"
+6. Check the exist the data(ReferenceId: 1) of table created earlier
 
-**pgadmin4ログイン情報**  
+**pgadmin4 login information**  
 
-|パラメータ|値|
+|parameter|value|
 |:----|:----|
-|ログインID|example@example.co.jp|
-|パスワード|password|
+|Login ID|<example@example.co.jp>|
+|password|password|
 
-**サーバ登録情報**  
+**Server registration information**  
 
-|パラメータ|値|
+|parameter|value|
 |:----|:----|
-|名前|db|
-|ホスト名/アドレス|db|
-|ユーザ名|postgres|
-|パスワード|postgres|
+|name|db|
+|hostname/address|db|
+|username|postgres|
+|password|postgres|
