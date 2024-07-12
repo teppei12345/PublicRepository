@@ -1,2 +1,0 @@
-ARG VERSION=${PGADMIN4_VER}
-FROM dpage/pgadmin4:${VERSION}

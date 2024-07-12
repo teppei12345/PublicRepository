@@ -20,7 +20,7 @@
 
 ### できること
 
-* 4つのコマンドで Pleasanter の利用ができます  
+* 3つのコマンドで Pleasanter の利用ができます  
 * Pleasanter のパラメータ設定を引き継ぐことができます  
 * PostgreSQL に蓄積したデータを永続化できます  
 
@@ -28,14 +28,97 @@
 
 本モジュールには、下記ツールの下記バージョンが含まれます。  
 
-* Pleasanter：1.3.6.0  
-* PostgreSQL：15  
-* pgadmin：8.6  
+|ツール|バージョン|
+|:----|:----|
+|Pleasanter|1.3.6.0|
+|PostgreSQL|15|
+|pgadmin4|8.6|
 
-## 導入手順
+## 手順
+
+### 導入
 
 1. 同階層に配置されている「PleasanterModule.zip」をダウンロード  
 2. 「PleasanterModule.zip」を任意のディレクトリに解凍  
     **※ 解凍するディレクトリに指定はありません**  
 3. 「PleasanterModule」ディレクト上でコマンドプロンプトを起動  
-4. 
+4. 下記の順番の通り、コマンドを実行  
+
+#### 1. Implem.PleasanterとImplem.Codedefinerのイメージプル
+
+```CMD
+docker compose build
+```
+
+#### 2. PostgreSQLのイメージプル・コンテナ実行とCodedefinerの実行
+
+```CMD
+docker compose run --rm codedefiner _rds
+```
+
+#### 3. Pleasanterのコンテナ実行
+
+```CMD
+docker compose up -d pleasanter
+```
+
+#### 4. pgadmin4のイメージプル・コンテナ実行
+
+PostgreSQLを参照するためのGUIツール「pgadmin4」をご利用の方はこちらのコマンドも実行してください。  
+
+```CMD
+docker compose up -d pgadmin4
+```
+
+### 起動確認
+
+上記コマンドで各ツールが起動しているかどうか確認してください。  
+
+#### Pleasanter(localhost:50001)にアクセス
+
+[localhost:50001](http://localhost:50001/)にアクセスし、Pleasanter のログイン画面にアクセスできるか確認してください。  
+
+#### pgadmin4(localhost:12345)にアクセス
+
+[localhost:12345](http://localhost:12345/)にアクセスし、pgadmin4 のログイン画面にアクセスできるか確認してください。  
+
+### 利用確認
+
+#### Pleasanterでテーブルを作成
+
+下記の手順で記録テーブルを作成し、一覧画面に遷移することを確認してください。  
+
+##### 初期ログインからテーブル作成の手順
+
+1. 下記「Pleasanterログイン情報」の通り入力後、「ログイン」をクリック  
+2. 表示されたダイアログ上で任意のパスワードを入力し、「ログイン」をクリック  
+    **※ 以降のログイン情報となるため、厳重に管理してください**  
+3. 画面左上の「+」をクリック  
+4. 遷移後の画面左から「記録テーブル」を選択後、「作成」をクリック  
+5. 任意の名前を入力後、「作成」をクリック  
+6. 作成されたテーブルをクリックし、一覧画面に遷移することを確認  
+
+**Pleasanterログイン情報**  
+
+|パラメータ|値|
+|:----|:----|
+|ログインID|Administrator|
+|パスワード|pleasanter|
+
+#### pgadmin4でデータを確認
+
+1. 下記「pgadmin4ログイン情報」の通り入力後、「ログイン」をクリック  
+2. 「Server」を右クリックし、「登録 > サーバ」をクリック  
+3. 下記「サーバ登録情報」の通り入力後、「適用」をクリック  
+4. 「Server > db > Implem.Pleasanter > スキーマ > Implem.Pleasanter > テーブル > Items」テーブルを右クリック  
+5. 
+
+**pgadmin4ログイン情報**  
+
+|パラメータ|値|
+|:----|:----|
+|ログインID|example@example.co.jp|
+|パスワード|password|
+
+**サーバ登録情報**  
+
