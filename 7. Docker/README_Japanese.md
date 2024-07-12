@@ -117,14 +117,14 @@ docker compose up -d pgadmin4
 
 |パラメータ|値|
 |:----|:----|
-|ログインID|example@example.co.jp|
-|パスワード|password|
+|Email Address / Username|example@example.co.jp|
+|Password|password|
 
 **サーバ登録情報**  
 
-|パラメータ|値|
-|:----|:----|
-|名前|db|
-|ホスト名/アドレス|db|
-|ユーザ名|postgres|
-|パスワード|postgres|
+|タブ|パラメータ|値|
+|:----|:----|:----|
+|全般|名前|db|
+|接続|ホスト名/アドレス|db|
+|接続|ユーザ名|postgres|
+|接続|パスワード|postgres|

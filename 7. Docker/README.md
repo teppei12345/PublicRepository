@@ -81,17 +81,17 @@ Please access [localhost:50001](http://localhost:50001/) and check you can acces
 
 #### Create a table with Pleasanter
 
-Please follow the steps below to create "a record table" and check it moves to "the list screen".  
+Please follow the steps below to create "Recorded table" and check it moves to "the list screen".  
 
 ##### Steps to create a table from first login
 
-1. Entering the "Pleasanter login information" below, then click "Login"
-2. Enter any password in the dialog that appears and click "Change"
+1. Entering the "Pleasanter login information" below, then click "ログイン"
+2. Enter any password in the dialog that appears and click "変更"
     **※Please manage this carefully as it will be your login information from now on**  
 3. Click "+" at the top left of the screen
-4. Select "Recording Table" from the left side of the screen after transition, then click "Create"
+4. Select "Recorded table" from the left side of the screen after transition, then click "Create"
 5. Entering any name, then click "Create"
-6. Click on the created table and confirm that it will move to "the list screen".
+6. Click on the created table and confirm.
 
 **Pleasanter login information**  
 
@@ -109,7 +109,7 @@ Please access [localhost:12345](http://localhost:12345/) and check you can acces
 1. Entering the "pgadmin4 login information" below, then click "Login".
 2. Right-click "Servers" and click "Register > Server..."
 3. Entering the "Server registration information" below, then click "Apply".
-4. Right-click the "Servers > db > Database > Implem.Pleasanter > Schema > Implem.Pleasanter > Tables > Items" table.
+4. Right-click the "Servers > db > Databases > Implem.Pleasanter > Schemas > Implem.Pleasanter > Tables > Items" table.
 5. Click "View/Edit Data > Last 100 Rows"
 6. Check the exist the data(ReferenceId: 1) of table created earlier
 
@@ -117,14 +117,14 @@ Please access [localhost:12345](http://localhost:12345/) and check you can acces
 
 |parameter|value|
 |:----|:----|
-|Login ID|<example@example.co.jp>|
-|password|password|
+|Email Address / Username|<example@example.co.jp>|
+|Password|password|
 
 **Server registration information**  
 
-|parameter|value|
-|:----|:----|
-|name|db|
-|hostname/address|db|
-|username|postgres|
-|password|postgres|
+|Tab|parameter|value|
+|:----|:----|:----|
+|General|Name|db|
+|Connection|Host name/address|db|
+|Connection|Username|postgres|
+|Connection|Password|postgres|
