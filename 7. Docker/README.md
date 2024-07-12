@@ -45,19 +45,19 @@
 4. 「PleasanterModule」ディレクト上でコマンドプロンプトを起動  
 5. 下記の順番の通り、コマンドを実行  
 
-#### 1. Implem.PleasanterとImplem.Codedefinerのイメージプル
+#### 1. イメージプル
 
 ```CMD
 docker compose build
 ```
 
-#### 2. PostgreSQLのイメージプル・コンテナ実行とCodedefinerの実行
+#### 2. PostgreSQLコンテナ実行とCodedefinerの実行
 
 ```CMD
 docker compose run --rm codedefiner _rds
 ```
 
-#### 3. Pleasanterのコンテナ実行
+#### 3. Pleasanterコンテナ実行
 
 ```CMD
 docker compose up -d pleasanter
@@ -71,19 +71,13 @@ PostgreSQLを参照するためのGUIツール「pgadmin4」をご利用の方�
 docker compose up -d pgadmin4
 ```
 
-### 起動確認
+### 起動・動作確認
 
 上記コマンドで各ツールが起動しているかどうか確認してください。  
 
 #### Pleasanter(localhost:50001)にアクセス
 
 [localhost:50001](http://localhost:50001/)にアクセスし、Pleasanter のログイン画面にアクセスできるか確認してください。  
-
-#### pgadmin4(localhost:12345)にアクセス
-
-[localhost:12345](http://localhost:12345/)にアクセスし、pgadmin4 のログイン画面にアクセスできるか確認してください。  
-
-### 利用確認
 
 #### Pleasanterでテーブルを作成
 
@@ -106,13 +100,18 @@ docker compose up -d pgadmin4
 |ログインID|Administrator|
 |パスワード|pleasanter|
 
+#### pgadmin4(localhost:12345)にアクセス
+
+[localhost:12345](http://localhost:12345/)にアクセスし、pgadmin4 のログイン画面にアクセスできるか確認してください。  
+
 #### pgadmin4でデータを確認
 
 1. 下記「pgadmin4ログイン情報」の通り入力後、「Login」をクリック  
-2. 「Server」を右クリックし、「登録 > サーバ」をクリック  
+2. 「Servers」を右クリックし、「登録 > サーバ..」をクリック  
 3. 下記「サーバ登録情報」の通り入力後、「適用」をクリック  
-4. 「Server > db > Implem.Pleasanter > スキーマ > Implem.Pleasanter > テーブル > Items」テーブルを右クリック  
-5. 
+4. 「Servers > db > データベース > Implem.Pleasanter > スキーマ > Implem.Pleasanter > テーブル > Items」テーブルを右クリック  
+5. 「データを閲覧/編集 > 最後の100行」をクリック  
+6. 先ほど作成したテーブルのデータ(ReferenceId：1)の存在を確認  
 
 **pgadmin4ログイン情報**  
 
@@ -123,3 +122,9 @@ docker compose up -d pgadmin4
 
 **サーバ登録情報**  
 
+|パラメータ|値|
+|:----|:----|
+|名前|db|
+|ホスト名/アドレス|db|
+|ユーザ名|postgres|
+|パスワード|postgres|
