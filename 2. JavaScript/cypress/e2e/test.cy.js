@@ -4,8 +4,11 @@ describe('template spec', () => {
     cy.get('#Users_LoginId').click();
     cy.get('#Users_LoginId').type('administrator');
     cy.get('#Users_Password').click();
+    cy.get('#Users_Password').type('teppei1084');
+    cy.get('#Login').click();
     cy.url().should('contains', 'http://localhost:50001/');
     cy.get('.new').click();
+    cy.get('#StandardTemplates > li:nth-child(4)').click();
     cy.get('#OpenSiteTitleDialog').click();
     cy.get('#CreateByTemplate').click();
     cy.url().should('contains', 'http://localhost:50001/items/1/index');
