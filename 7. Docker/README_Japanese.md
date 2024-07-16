@@ -1,5 +1,8 @@
 # Docker Compose を利用した Pleasanter * PostgreSQL 環境構築用モジュール
 
+**こちらの「README.md」は日本語で書かれています。**  
+**英語で記述された「README.md」を見たい場合は、「./README_Japanese.md」をご参照ください。**  
+
 ## 概要
 
 本モジュールでは、Docker 環境下で Pleasanter * PostgreSQL の運用ができます。  
