@@ -12,17 +12,17 @@ Please see below for each tool and service.
 
 ### Target audience
 
-* Those who are worried about how to inherit parameter settings due to version upgrade etc. of Pleasanter using Docker
-* Those who want to persist data accumulated with PostgreSQL using Docker
-* Those who want to achieve both of the above
-* Those who want to use Docker Compose for building Pleasanter * PostgreSQL environment
-* Those who want to use Pleasanter comfortably
+* Those who are worried about how to inherit parameter settings due to version upgrade etc. of Pleasanter using Docker  
+* Those who want to persist data accumulated with PostgreSQL using Docker  
+* Those who want to achieve both of the above  
+* Those who want to use Docker Compose for building Pleasanter * PostgreSQL environment  
+* Those who want to use Pleasanter comfortably  
 
 ### What you can do
 
 * You can use Pleasanter with 3 commands  
-* You can inherit Pleasanter parameter settings
-* You can persist accumulated PostgreSQL data
+* You can inherit Pleasanter parameter settings  
+* You can persist accumulated PostgreSQL data  
 
 ### content
 
@@ -38,12 +38,12 @@ This module includes the following versions
 
 ### introduction
 
-1. Download "PleasanterModule.zip" located at the same level
-2. Unzip "PleasanterModule.zip" to any directory
+1. Download "PleasanterModule.zip" located at the same level  
+2. Unzip "PleasanterModule.zip" to any directory  
     **※ There is no specification for the directory to unzip**  
-3. Place the license file on the "PleasanterModule" directory
-4. Start the command prompt on the "PleasanterModule" directory
-5. Execute the commands in the following order
+3. Place the license file on the "PleasanterModule" directory  
+4. Start the command prompt on the "PleasanterModule" directory  
+5. Execute the commands in the following order  
 
 #### 1. Image pull
 
@@ -85,13 +85,13 @@ Please follow the steps below to create "Recorded table" and check it moves to "
 
 ##### Steps to create a table from first login
 
-1. Entering the "Pleasanter login information" below, then click "Login"
-2. Enter any password in the dialog that appears and click "Change"
+1. Entering the "Pleasanter login information" below, then click "Login"  
+2. Enter any password in the dialog that appears and click "Change"  
     **※Please manage this carefully as it will be your login information from now on**  
-3. Click "+" at the top left of the screen
-4. Select "Recorded table" from the left side of the screen after transition, then click "Create"
-5. Entering any name, then click "Create"
-6. Click on the created table and confirm.
+3. Click "+" at the top left of the screen  
+4. Select "Recorded table" from the left side of the screen after transition, then click "Create"  
+5. Entering any name, then click "Create"  
+6. Click on the created table and confirm.  
 
 **Pleasanter login information**  
 
@@ -106,12 +106,12 @@ Please access [localhost:12345](http://localhost:12345/) and check you can acces
 
 #### Check the data with pgadmin4
 
-1. Entering the "pgadmin4 login information" below, then click "Login".
-2. Right-click "Servers" and click "Register > Server..."
-3. Entering the "Server registration information" below, then click "Apply".
-4. Right-click the "Servers > db > Databases > Implem.Pleasanter > Schemas > Implem.Pleasanter > Tables > Items" table.
-5. Click "View/Edit Data > Last 100 Rows"
-6. Check the exist the data(ReferenceId: 1) of table created earlier
+1. Entering the "pgadmin4 login information" below, then click "Login".  
+2. Right-click "Servers" and click "Register > Server..."  
+3. Entering the "Server registration information" below, then click "Apply".  
+4. Right-click the "Servers > db > Databases > Implem.Pleasanter > Schemas > Implem.Pleasanter > Tables > Items" table.  
+5. Click "View/Edit Data > Last 100 Rows"  
+6. Check the exist the data(ReferenceId: 1) of table created earlier  
 
 **pgadmin4 login information**  
 
