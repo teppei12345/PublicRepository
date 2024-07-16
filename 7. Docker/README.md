@@ -128,3 +128,22 @@ Please access [localhost:12345](http://localhost:12345/) and check you can acces
 |Connection|Host name/address|db|
 |Connection|Username|postgres|
 |Connection|Password|postgres|
+
+### Operation
+
+#### 1. Reload parameters
+
+```CMD
+docker compose up -d --build
+```
+
+### Delete Pleasanter * PostgreSQL environment
+
+1. Start the command prompt on the "PleasanterModule" directory  
+2. Execute the commands in the following order  
+
+#### 1. Delete container and network
+
+```CMD
+docker compose down
+```

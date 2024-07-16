@@ -128,3 +128,22 @@ docker compose up -d pgadmin4
 |接続|ホスト名/アドレス|db|
 |接続|ユーザ名|postgres|
 |接続|パスワード|postgres|
+
+### 運用
+
+#### 1. Parameter再読み込み
+
+```CMD
+docker compose up -d --build
+```
+
+### 環境削除
+
+1. 「PleasanterModule」ディレクト上でコマンドプロンプトを起動  
+2. 下記の順番の通り、コマンドを実行  
+
+#### 1. コンテナ・ネットワークの削除
+
+```CMD
+docker compose down
+```
