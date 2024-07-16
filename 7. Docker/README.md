@@ -131,6 +131,9 @@ Please access [localhost:12345](http://localhost:12345/) and check you can acces
 
 ### Operation
 
+1. Start the command prompt on the "PleasanterModule" directory  
+2. Execute the commands in the following order  
+
 #### 1. Reload parameters
 
 ```CMD

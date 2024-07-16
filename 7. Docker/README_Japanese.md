@@ -131,6 +131,9 @@ docker compose up -d pgadmin4
 
 ### 運用
 
+1. 「PleasanterModule」ディレクト上でコマンドプロンプトを起動  
+2. 下記の順番の通り、コマンドを実行  
+
 #### 1. Parameter再読み込み
 
 ```CMD
