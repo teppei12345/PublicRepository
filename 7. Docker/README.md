@@ -85,8 +85,8 @@ Please follow the steps below to create "Recorded table" and check it moves to "
 
 ##### Steps to create a table from first login
 
-1. Entering the "Pleasanter login information" below, then click "ログイン"
-2. Enter any password in the dialog that appears and click "変更"
+1. Entering the "Pleasanter login information" below, then click "Login"
+2. Enter any password in the dialog that appears and click "Change"
     **※Please manage this carefully as it will be your login information from now on**  
 3. Click "+" at the top left of the screen
 4. Select "Recorded table" from the left side of the screen after transition, then click "Create"
