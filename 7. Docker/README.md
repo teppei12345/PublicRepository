@@ -1,8 +1,5 @@
 # Module used Docker Compose for building Pleasanter * PostgreSQL environment
 
-**This "README.md" is written by English.**  
-**If you want to see "README.md" written by Japanese, please look at "./README_Japanese.md".**  
-
 ## overview
 
 This module allows you to operate Pleasanter * PostgreSQL in a Docker environment.  
