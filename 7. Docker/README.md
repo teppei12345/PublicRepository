@@ -117,7 +117,7 @@ Please access [localhost:12345](http://localhost:12345/) and check you can acces
 
 |parameter|value|
 |:----|:----|
-|Email Address / Username|<example@example.co.jp>|
+|Email Address / Username|example@example.co.jp|
 |Password|password|
 
 **Server registration information**  
