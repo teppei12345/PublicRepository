@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExportExcelFromJson_ProcessSettings")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20743d2d42f649f5422b4d0b44a9c619768a023f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2d9d3495d310c9239f663763b7aac5888eb6f5c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExportExcelFromJson_ProcessSettings")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExportExcelFromJson_ProcessSettings")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

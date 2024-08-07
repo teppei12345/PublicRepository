@@ -132,10 +132,35 @@ Please access [localhost:12345](http://localhost:12345/) and check you can acces
 |Connection|Username|postgres|
 |Connection|Password|postgres|
 
+### Change settings
+
+"Environmental Variables" are written in "PleasanterModule\.env".
+
+|Parameter|Explanation|
+|:----|:----|
+|PLEASANTER_VER|Pleasanter version|
+|POSTGRES_VER|postgreSQL version|
+|PGADMIN4_VER|pgadmin4 version|
+|Implem_Pleasanter_Rds_PostgreSQL_SaConnectionString|Connection string to connect with sa privileges|
+|Implem_Pleasanter_Rds_PostgreSQL_OwnerConnectionString|Connection string to connect with owner privileges|
+|Implem_Pleasanter_Rds_PostgreSQL_UserConnectionString|Connection string to connect with reader and writer privileges|
+|POSTGRES_USER|Super user name|
+|POSTGRES_PASSWORD|Super user password|
+|POSTGRES_DB|DB name created by default|
+|POSTGRES_HOST_AUTH_METHOD|Authentication method|
+|POSTGRES_INITDB_ARGS|Parameters to pass when running "initdb" command|
+|PGDATA|DB file path|
+|PGADMIN_DEFAULT_EMAIL|Default email address|
+|PGADMIN_DEFAULT_PASSWORD|Default password|
+
 ### Operation
 
 1. Start the command prompt on the "PleasanterModule" directory  
 2. Execute the commands in the following order  
+
+#### 1. Change parameters
+
+1. Change folder or file on the "PleasanterModule\Parameters" directory
 
 #### 1. Reload parameters
 
@@ -143,12 +168,12 @@ Please access [localhost:12345](http://localhost:12345/) and check you can acces
 docker compose up -d --build
 ```
 
-### Delete Pleasanter * PostgreSQL environment
+#### Delete Pleasanter * PostgreSQL environment
 
 1. Start the command prompt on the "PleasanterModule" directory  
 2. Execute the commands in the following order  
 
-#### 1. Delete container and network
+##### 1. Delete container and network
 
 ```CMD
 docker compose down
