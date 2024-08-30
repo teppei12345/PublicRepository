@@ -129,7 +129,7 @@ Please access [localhost:12345](http://localhost:12345/) and check you can acces
 |Connection|Username|postgres|
 |Connection|Password|postgres|
 
-### Change settings
+### Environmental variables
 
 "Environmental Variables" are written in "PleasanterModule\.env".
 
