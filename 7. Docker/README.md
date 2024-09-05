@@ -129,7 +129,7 @@ Please access [localhost:12345](http://localhost:12345/) and check you can acces
 |Connection|Username|postgres|
 |Connection|Password|postgres|
 
-### Change settings
+### Environmental variables
 
 "Environmental Variables" are written in "PleasanterModule\.env".
 
@@ -146,18 +146,20 @@ Please access [localhost:12345](http://localhost:12345/) and check you can acces
 |POSTGRES_DB|DB name created by default|
 |POSTGRES_HOST_AUTH_METHOD|Authentication method|
 |POSTGRES_INITDB_ARGS|Parameters to pass when running "initdb" command|
-|PGDATA|DB file path|
+|PGDATA|DB folder path|
 |PGADMIN_DEFAULT_EMAIL|Default email address|
 |PGADMIN_DEFAULT_PASSWORD|Default password|
 
 ### Operation
 
-1. Start the command prompt on the "PleasanterModule" directory  
-2. Execute the commands in the following order  
-
 #### 1. Change parameters
 
 1. Change folder or file on the "PleasanterModule\Parameters" directory
+
+#### procedure
+
+1. Start the command prompt on the "PleasanterModule" directory  
+2. Execute the commands in the following order
 
 #### 1. Reload parameters
 
